@@ -1,10 +1,13 @@
 # StartBot by the Alcoholicorn
 # essential package imports
 import discord
+import json
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-import chalk
+import os
+#import chalk
+
 
 # packages that I decided to import
 import random
@@ -15,7 +18,7 @@ bot = commands.Bot(command_prefix="!")
 # where out lists are declared
 sList = []
 sList.append("No matter who or what you support, I believe in supporting fairness first.")
-sList.append("We can't help everyone, but everyone can help someone.")
+sList.append("We can't help everyone, but everyone can help someone.s")
 sList.append("Encourage, lift and strengthen one another. For the positive energy spread to one will be felt by us all. For we are connected, one and all.")
 sList.append("If you want to support others you have to stay upright yourself.")
 sList.append("Your small support could accomplish a big dream.")
@@ -91,6 +94,80 @@ async def speak(ctx):
 @bot.command(pass_context=True)
 async def pet(ctx):
 	await bot.say(":heart::heart::heart: <:reinbark:384084080578396160> <:reinbark:384084080578396160>'wags tail enthusiastically'<:reinbark:384084080578396160> <:reinbark:384084080578396160>:heart::heart::heart:")
+
+###################################################THIS IS THE SAMPLE CODE TO READ THE JSON FILE####################################################################
+@bot.command(pass_context=True)
+async def test(ctx):
+	with open('C:/Users/jz326/Desktop/discord code/Discord-Diamond-Dog-master/Character/dbTest.json') as json_data:
+		d = json.load(json_data)
+		await bot.say(d['employees'][2]['firstName']) #Have to reference 
+
+###########################################################################################################################################################
+
+###################################################CHARACTER CREATION####################################################################
+@bot.command(pass_context=True)
+async def charCreate(ctx):
+
+    # Waits for user response and spits out a confirmation message (for testing)
+    await bot.say("Enter your character's name: ")
+    name = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's age: ")
+    age = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's race: " + "\n\n" + "Dragonborn" + "\n" + "Dwarf" + "\n" + "Elf" + "\n" + "Gnome" + "\n" + "Half-Elf" + "\n" + "Half-Orc" + "\n" + "Halfling" + "\n" + "Human" + "\n" + "Tiefling" + "\n\n" + "If you would like to choose another race for your character not listed above, please enter it now!") 
+    race = await bot.wait_for_message(author=ctx.message.author, content=None)
+   
+    await bot.say("Enter your character's class: ")
+    charClass = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's alignment: ")
+    alignment = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's height: ")
+    height = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's weight: ")
+    weight = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's hair color: ")
+    hairColor = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's eye color: ")
+    eyeColor = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("Enter your character's skin color: ")
+    skinColor = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("We want to know more about your character. What's their backstory?")
+    background = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("What are your character's traits?")
+    traits = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("What are your character's ideals?")
+    ideals = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("No one is without flaws. What are your character's?")
+    flaws = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("What are your character's bonds?")
+    bonds = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+    await bot.say("What are your character's proficiencies?")
+    proficiencies = await bot.wait_for_message(author=ctx.message.author, content=None)
+
+
+    # Writes response to JSON file
+    data = {'Characters':[{'name': name.clean_content, 'age': age.clean_content, 'race': race.clean_content, 'class': charClass.clean_content, 'alignment': alignment.clean_content, 'height': height.clean_content, 'weight': weight.clean_content, 'hairColor': hairColor.clean_content, 'eyeColor': eyeColor.clean_content, 'skinColor': skinColor.clean_content, 'background': background.clean_content, 'traits': traits.clean_content, 'ideals': ideals.clean_content, 'flaws': flaws.clean_content, 'bonds': bonds.clean_content, 'proficiencies': proficiencies.clean_content}]}
+    global loc
+    loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    with open(os.path.join(loc, 'C:\\Users\\Sagar Hansalia\\Discord-Diamond-Dog\\dbTest.json'), 'a') as outfile:
+      json.dump(data, outfile)
+    
+    #input(message.channel, message.content)
+
+#########################################################################################################################################
 
 
 @bot.command(pass_context=True)
