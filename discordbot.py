@@ -241,4 +241,9 @@ async def roll(dice : str):
     await bot.say(result)
 
 # This is where the authentication token is inserted
-bot.run("")
+text_file = open("authToken.txt", "r")
+#lines = text_file.readlines()
+token = text_file.readline()
+text_file.close()
+
+bot.run(token)
