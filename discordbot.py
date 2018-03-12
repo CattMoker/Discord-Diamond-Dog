@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix="!")
 
 # where out lists are declared
 sList = []
-with open('supportList.txt') as supportFile:
+with open('C://Users//Eroc//Documents//ggc//Discord-Diamond-Dog//supportList.txt') as supportFile:
     for line in supportFile:
         sList.append(line)
 
@@ -61,60 +61,62 @@ async def test(ctx):
 async def charCreate(ctx):
 
     # Waits for user response and spits out a confirmation message (for testing)
-    await bot.say("Enter your character's name: ")
+    # await bot.say("Enter your character's name: ")
+    await bot.send_message(ctx.message.author, "Enter your character's name: ")
     name = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's age: ")
+    await bot.send_message(ctx.message.author, "Enter your character's age: ")
     age = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's race: " + "\n\n" + "Dragonborn" + "\n" + "Dwarf" + "\n" + "Elf" + "\n" + "Gnome" + "\n" + "Half-Elf" + "\n" + "Half-Orc" + "\n" + "Halfling" + "\n" + "Human" + "\n" + "Tiefling" + "\n\n" + "If you would like to choose another race for your character not listed above, please enter it now!") 
+    await bot.send_message(ctx.message.author, "Enter your character's race: " + "\n\n" + "Dragonborn" + "\n" + "Dwarf" + "\n" + "Elf" + "\n" + "Gnome" + "\n" + "Half-Elf" + "\n" + "Half-Orc" + "\n" + "Halfling" + "\n" + "Human" + "\n" + "Tiefling" + "\n\n" + "If you would like to choose another race for your character not listed above, please enter it now!") 
     race = await bot.wait_for_message(author=ctx.message.author, content=None)
    
-    await bot.say("Enter your character's class: ")
+    await bot.send_message(ctx.message.author, "Enter your character's class: ")
     charClass = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's alignment: ")
+    await bot.send_message(ctx.message.author, "Enter your character's alignment: ")
     alignment = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's height: ")
+    await bot.send_message(ctx.message.author, "Enter your character's height: ")
     height = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's weight: ")
+    await bot.send_message(ctx.message.author, "Enter your character's weight: ")
     weight = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's hair color: ")
+    await bot.send_message(ctx.message.author, "Enter your character's hair color: ")
     hairColor = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's eye color: ")
+    await bot.send_message(ctx.message.author, "Enter your character's eye color: ")
     eyeColor = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("Enter your character's skin color: ")
+    await bot.send_message(ctx.message.author, "Enter your character's skin color: ")
     skinColor = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("We want to know more about your character. What's their backstory?")
+    await bot.send_message(ctx.message.author, "We want to know more about your character. What's their backstory?")
     background = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("What are your character's traits?")
+    await bot.send_message(ctx.message.author, "What are your character's traits?")
     traits = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("What are your character's ideals?")
+    await bot.send_message(ctx.message.author, "What are your character's ideals?")
     ideals = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("No one is without flaws. What are your character's?")
+    await bot.send_message(ctx.message.author, "No one is without flaws. What are your character's?")
     flaws = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("What are your character's bonds?")
+    await bot.send_message(ctx.message.author, "What are your character's bonds?")
     bonds = await bot.wait_for_message(author=ctx.message.author, content=None)
 
-    await bot.say("What are your character's proficiencies?")
+    await bot.send_message(ctx.message.author, "What are your character's proficiencies?")
     proficiencies = await bot.wait_for_message(author=ctx.message.author, content=None)
-
+    
+    await bot.send_message(ctx.message.author, "All done, your character has been created.")
 
     # Writes response to JSON file
     data = {'Characters':[{'name': name.clean_content, 'age': age.clean_content, 'race': race.clean_content, 'class': charClass.clean_content, 'alignment': alignment.clean_content, 'height': height.clean_content, 'weight': weight.clean_content, 'hairColor': hairColor.clean_content, 'eyeColor': eyeColor.clean_content, 'skinColor': skinColor.clean_content, 'background': background.clean_content, 'traits': traits.clean_content, 'ideals': ideals.clean_content, 'flaws': flaws.clean_content, 'bonds': bonds.clean_content, 'proficiencies': proficiencies.clean_content}]}
     global loc
     loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    with open(os.path.join(loc, 'C:\\Users\\Sagar Hansalia\\Discord-Diamond-Dog\\dbTest.json'), 'a') as outfile:
+    with open(os.path.join(loc, 'dbTest.json'), 'a') as outfile:
       json.dump(data, outfile)
     
     #input(message.channel, message.content)
@@ -193,7 +195,7 @@ async def roll(dice : str):
     await bot.say(result)
 
 # This is where the authentication token is inserted
-text_file = open("authToken.txt", "r")
+text_file = open("C://Users//Eroc//Documents//ggc//Discord-Diamond-Dog//authToken.txt", "r")
 #lines = text_file.readlines()
 token = text_file.readline()
 text_file.close()
