@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix="!")
 
 # where out lists are declared
 sList = []
-with open('C://Users//Eroc//Documents//ggc//Discord-Diamond-Dog//supportList.txt') as supportFile:
+with open('supportList.txt') as supportFile:
     for line in supportFile:
         sList.append(line)
 
@@ -195,7 +195,7 @@ async def roll(dice : str):
     await bot.say(result)
 
 # This is where the authentication token is inserted
-text_file = open("C://Users//Eroc//Documents//ggc//Discord-Diamond-Dog//authToken.txt", "r")
+text_file = open("authToken.txt", "r")
 #lines = text_file.readlines()
 token = text_file.readline()
 text_file.close()
