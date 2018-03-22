@@ -5,7 +5,7 @@ class ContainerCapacity(Equipment):
     name = ""
     capacity = None
 
-    def _init_ContainerCapacity(self, inCategory, inName, inCost, inWeight, inCapacity):
+    def __init__(self, inCategory, inName, inCost, inWeight, inCapacity):
         super().__init__(inCategory, inCost, inWeight)
         self.name = inName
 

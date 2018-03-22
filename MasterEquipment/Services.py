@@ -5,7 +5,7 @@ class Services(Equipment):
     name = ""
     pay = ""
 
-    def _init_Services(self, inCategory, inName, inCost, inWeight, inPay):
+    def __init__(self, inCategory, inName, inCost, inWeight, inPay):
         super().__init__(inCategory, inCost, inWeight)
 
         self.name = inName

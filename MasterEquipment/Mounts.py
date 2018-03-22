@@ -5,7 +5,7 @@ class Mounts(Equipment):
     speed = None
     carryingCapacity = None
 
-    def _init_Mounts(self, inCategory, inCost, inWeight, inSpeed, inCarryingCapacity):
+    def __init__(self, inCategory, inCost, inWeight, inSpeed, inCarryingCapacity):
         super().__init__(inCategory, inCost, inWeight)
 
         self.speed = inSpeed

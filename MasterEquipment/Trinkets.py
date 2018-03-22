@@ -5,7 +5,7 @@ class Trinkets(Equipment):
     trinkNum = None
     trinkDesc = None
 
-    def _init_Trinkets(self, inCategory, inCost, inWeight, inTrinkNum, inTrinkDesc):
+    def __init__(self, inCategory, inCost, inWeight, inTrinkNum, inTrinkDesc):
         super().__init__(inCategory, inCost, inWeight)
 
         self.trinkNum = inTrinkNum

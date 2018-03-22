@@ -4,7 +4,7 @@ from MasterEquipment.Equipment import Equipment as Equipment
 class AdventuringGear(Equipment):
     name = ""
 
-    def _init_AdventuringGear(self, inCategory, inName, inCost, inWeight):
+    def __init__(self, inCategory, inName, inCost, inWeight):
         super().__init__(inCategory, inCost, inWeight)
 
         self.name = inName

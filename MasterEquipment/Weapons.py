@@ -4,18 +4,17 @@ from MasterEquipment.Equipment import Equipment as Equipment
 class Weapons(Equipment):
     name = ""
 
-    weaponType = None
     damage = None
     properties = None
 
-    def _init_Weapons(self):
+    def __init__(self):
         subName = ""
 
         weaponType = ""
         damage = ""
         properties = ""
 
-    def _init_Weapons(self, inCategory, inName, inCost, inWeight, inDamage, inProperties):
+    def __init__(self, inCategory, inName, inCost, inWeight, inDamage, inProperties):
         super().__init__(inCategory, inCost, inWeight)
         self.name = inName
 
