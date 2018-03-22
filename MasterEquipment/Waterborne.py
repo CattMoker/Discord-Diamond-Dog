@@ -6,8 +6,8 @@ class Waterborne(Equipment):
     def _init_Waterborne(self):
         speed = ""
    
-    def _init_Waterborne(self, inName, inCost, inWeight, inSpeed):
-        super().__init__(inName, inCost, inWeight)
+    def _init_Waterborne(self, inCategory, inCost, inWeight, inSpeed):
+        super().__init__(inCategory, inCost, inWeight)
 
         self.speed = inSpeed
     

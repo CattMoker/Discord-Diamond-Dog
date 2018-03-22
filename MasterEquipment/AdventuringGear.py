@@ -1,15 +1,16 @@
 from MasterEquipment.Equipment import Equipment as Equipment
 
+
 class AdventuringGear(Equipment):
-    subName = ""
+    name = ""
 
-    def _init_AdventuringGear(self, inName, inSubName, inCost, inWeight):
-        super().__init__(inName, inCost, inWeight)
+    def _init_AdventuringGear(self, inCategory, inName, inCost, inWeight):
+        super().__init__(inCategory, inCost, inWeight)
 
-        self.subName = inSubName
+        self.name = inName
 
-    def getSubName(self):
-        return self.subName
+    def getName(self):
+        return self.name
 
-    def setSubName(self, inSubName):
-        self.subName = inSubName
+    def setName(self, inName):
+        self.name = inName

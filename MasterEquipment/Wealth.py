@@ -4,8 +4,8 @@ from MasterEquipment.Equipment import Equipment as Equipment
 class Wealth(Equipment):
     funds = None
 
-    def _init_Wealth(self, inName, inCost, inWeight, inFunds):
-        super().__init__(inName, inCost, inWeight)
+    def _init_Wealth(self, inCategory, inCost, inWeight, inFunds):
+        super().__init__(inCategory, inCost, inWeight)
 
         self.funds = inFunds
 

@@ -1,5 +1,6 @@
 from MasterEquipment.Equipment import Equipment as Equipment
 
+
 class Armor(Equipment):
     name = None
     armorClass = None
@@ -14,7 +15,7 @@ class Armor(Equipment):
         self.stealth = inStealth
         self.name = inName
 
-    def getSubName(self):
+    def getName(self):
         return self.name
 
     def getArmorClass(self):
@@ -25,6 +26,9 @@ class Armor(Equipment):
 
     def getStealth(self):
         return self.stealth
+
+    def setName(self, inName):
+        self.name = inName
 
     def setArmorClass(self, inArmorClass):
         self.armorClass = inArmorClass

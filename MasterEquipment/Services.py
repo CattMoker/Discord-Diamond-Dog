@@ -2,23 +2,23 @@ from MasterEquipment.Equipment import Equipment as Equipment
 
 
 class Services(Equipment):
-    subName = ""
+    name = ""
     pay = ""
 
-    def _init_Services(self, inName, inSubName, inCost, inWeight, inPay):
-        super().__init__(inName, inCost, inWeight)
+    def _init_Services(self, inCategory, inName, inCost, inWeight, inPay):
+        super().__init__(inCategory, inCost, inWeight)
 
-        self.subName = inSubName
+        self.name = inName
         self.pay = inPay
 
-    def getSubName(self):
-        return self.subName
+    def getName(self):
+        return self.name
 
     def getPay(self):
         return self.pay
 
-    def setSubName(self, inSubName):
-        self.subName = inSubName
+    def setName(self, inName):
+        self.name = inName
 
     def setPay(self, inPay):
         self.pay = inPay

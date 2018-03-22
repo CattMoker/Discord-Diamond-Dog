@@ -4,8 +4,8 @@ from MasterEquipment.Equipment import Equipment as Equipment
 class LifeExpenses(Equipment):
     price = None
 
-    def _init_LifeExpenses(self, inName, inCost, inWeight, inPrice):
-        super().__init__(inName, inCost, inWeight)
+    def _init_LifeExpenses(self, inCategory, inCost, inWeight, inPrice):
+        super().__init__(inCategory, inCost, inWeight)
 
         self.price = inPrice
 

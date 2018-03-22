@@ -1,55 +1,41 @@
 class Equipment:
-    #basic characteristics
+    # basic characteristics
     category = ""
 
-    #numerical characteristics
+    # numerical characteristics
     cost = ""
     weight = ""
 
     def __init__(self, inCategory, inCost, inWeight):
-        #basic characteristics
+        # basic characteristics
         self.category = inCategory
 
-        #numerical characteristics
+        # numerical characteristics
         self.cost = inCost
         self.weight = inWeight
 
-    #basic
-    def getName(self):
+    # basic
+    def getCategory(self):
         return self.category
 
-    #num
+    # num
     def getCost(self):
         return self.cost
+
     def getWeight(self):
         return self.weight
 
-
-
-    #basic
-    def setName(self, inCategory):
+    # basic
+    def setCategory(self, inCategory):
         self.category = inCategory
 
-    #num
+    # num
     def setCost(self, inCost):
         self.cost = inCost
+
     def setWeight(self, inWeight):
         self.weight = inWeight
-
 
     def toString(self):
         self.GetBaseChar()
         self.GetNumChar()
-
-
-        
-
-
-        
-
-
-
-
-
-
-

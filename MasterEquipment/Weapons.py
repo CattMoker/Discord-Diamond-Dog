@@ -22,7 +22,7 @@ class Weapons(Equipment):
         self.damage = inDamage
         self.properties = inProperties
 
-    def getSubName(self):
+    def getName(self):
         return self.name
 
     def getWeaponType(self):
@@ -34,8 +34,8 @@ class Weapons(Equipment):
     def getProperties(self):
         return self.properties
 
-    def setSubName(self, inSubName):
-        self.name = inSubName
+    def setName(self, inName):
+        self.name = inName
 
     def setDamage(self, inDamage):
         self.damage = inDamage
