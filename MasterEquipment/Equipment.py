@@ -1,14 +1,14 @@
 class Equipment:
     #basic characteristics
-    name = ""
+    category = ""
 
     #numerical characteristics
     cost = ""
     weight = ""
 
-    def __init__(self, inName, inCost, inWeight):
+    def __init__(self, inCategory, inCost, inWeight):
         #basic characteristics
-        self.name = inName
+        self.category = inCategory
 
         #numerical characteristics
         self.cost = inCost
@@ -16,7 +16,7 @@ class Equipment:
 
     #basic
     def getName(self):
-        return self.name
+        return self.category
 
     #num
     def getCost(self):
@@ -27,8 +27,8 @@ class Equipment:
 
 
     #basic
-    def setName(self, inName):
-        self.name = inName
+    def setName(self, inCategory):
+        self.category = inCategory
 
     #num
     def setCost(self, inCost):

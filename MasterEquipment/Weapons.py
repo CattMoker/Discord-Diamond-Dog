@@ -2,7 +2,7 @@ from MasterEquipment.Equipment import Equipment as Equipment
 
 
 class Weapons(Equipment):
-    subName = ""
+    name = ""
 
     weaponType = None
     damage = None
@@ -15,16 +15,15 @@ class Weapons(Equipment):
         damage = ""
         properties = ""
 
-    def _init_Weapons(self, inName, inSubName, inCost, inWeight, inWeaponType, inDamage, inProperties):
-        super().__init__(inName, inCost, inWeight)
-        self.subName = inSubName
+    def _init_Weapons(self, inCategory, inName, inCost, inWeight, inDamage, inProperties):
+        super().__init__(inCategory, inCost, inWeight)
+        self.name = inName
 
-        self.weaponType = inWeaponType
         self.damage = inDamage
         self.properties = inProperties
 
     def getSubName(self):
-        return self.subName
+        return self.name
 
     def getWeaponType(self):
         return self.weaponType
@@ -36,10 +35,7 @@ class Weapons(Equipment):
         return self.properties
 
     def setSubName(self, inSubName):
-        self.subName = inSubName
-
-    def setWeaponType(self, inWeaponType):
-        self.weaponType = inWeaponType
+        self.name = inSubName
 
     def setDamage(self, inDamage):
         self.damage = inDamage

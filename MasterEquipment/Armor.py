@@ -1,21 +1,21 @@
 from MasterEquipment.Equipment import Equipment as Equipment
 
 class Armor(Equipment):
-    subName = None
+    name = None
     armorClass = None
     strength = None
     stealth = None
 
-    def __init__(self, inName, inSubName, inCost, inWeight, inArmorClass, inStrength, inStealth):
-        super().__init__(inName, inCost, inWeight)
+    def __init__(self, inCategory, inName, inCost, inWeight, inArmorClass, inStrength, inStealth):
+        super().__init__(inCategory, inCost, inWeight)
 
         self.armorClass = inArmorClass
         self.strength = inStrength
         self.stealth = inStealth
-        self.subName = inSubName
+        self.name = inName
 
     def getSubName(self):
-        return self.subName
+        return self.name
 
     def getArmorClass(self):
         return self.armorClass
