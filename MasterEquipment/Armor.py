@@ -2,10 +2,10 @@ from MasterEquipment.Equipment import Equipment as Equipment
 
 
 class Armor(Equipment):
-    name = None
-    armorClass = None
-    strength = None
-    stealth = None
+    name = ""
+    armorClass = ""
+    strength = ""
+    stealth = ""
 
     def __init__(self, inCategory, inName, inCost, inWeight, inArmorClass, inStrength, inStealth):
         super().__init__(inCategory, inCost, inWeight)
