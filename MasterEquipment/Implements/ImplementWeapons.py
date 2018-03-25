@@ -52,12 +52,6 @@ weaponList.append(Weapons.Weapons("Martial Ranged Weapons", "Net", "1 gp", "3 lb
 
 
 
-for x in weaponList:
-    print(x.getDamage())
-
-
-
-
 
 
 
