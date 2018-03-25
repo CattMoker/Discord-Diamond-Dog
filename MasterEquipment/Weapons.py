@@ -4,15 +4,8 @@ from MasterEquipment.Equipment import Equipment as Equipment
 class Weapons(Equipment):
     name = ""
 
-    damage = None
-    properties = None
-
-    def __init__(self):
-        subName = ""
-
-        weaponType = ""
-        damage = ""
-        properties = ""
+    damage = ""
+    properties = ""
 
     def __init__(self, inCategory, inName, inCost, inWeight, inDamage, inProperties):
         super().__init__(inCategory, inCost, inWeight)
@@ -23,9 +16,6 @@ class Weapons(Equipment):
 
     def getName(self):
         return self.name
-
-    def getWeaponType(self):
-        return self.weaponType
 
     def getDamage(self):
         return self.damage
@@ -42,6 +32,6 @@ class Weapons(Equipment):
     def setProperties(self, inProperties):
         self.properties = inProperties
 
-    def toStrings(self):
+    def toString(self):
         super().toString()
-        print("Name: " + self.getName() + " Weapon Type: " + self.getWeaponType() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties())
+        print("Name: " + self.getName() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties())
