@@ -114,5 +114,5 @@ adventuringGear.append(AdventuringGear.AdventuringGear("", "Waterskin", "2 sp", 
 adventuringGear.append(AdventuringGear.AdventuringGear("", "Whetstone", "1 cp", "1 lb."))
 
 
-
+adventuringGear[0].toString()
 # print(adventuringGear[0].getName())

@@ -22,3 +22,7 @@ class Mounts(Equipment):
 
     def setCarryingCapacity(self, inCarryingCapacity):
         self.carryingCapacity = inCarryingCapacity
+
+    def toString(self):
+        super().toString()
+        print("Speed: " + self.getSpeed() + " Carrying Capacity: " + self.getCarryingCapacity())

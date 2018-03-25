@@ -22,3 +22,7 @@ class ContainerCapacity(Equipment):
 
     def setCapacity(self, inCapacity):
         self.capacity = inCapacity
+
+    def toString(self):
+        super().toString()
+        print("Name: " + self.getName() + " Capacity: " + self.getCapacity())

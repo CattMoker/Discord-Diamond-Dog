@@ -14,3 +14,7 @@ class TradeGoods(Equipment):
 
     def setGoods(self, inGoods):
         self.goods = inGoods
+
+    def toString(self):
+        super().toString()
+        print("Goods: " + self.getGoods())

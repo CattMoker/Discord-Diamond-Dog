@@ -37,5 +37,4 @@ class Equipment:
         self.weight = inWeight
 
     def toString(self):
-        self.GetBaseChar()
-        self.GetNumChar()
+        print("Category: " + self.getCategory() + " Cost: " + self.getCost() + " Weight: " + self.getWeight() + " ")

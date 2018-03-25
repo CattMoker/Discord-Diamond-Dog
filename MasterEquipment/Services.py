@@ -22,3 +22,7 @@ class Services(Equipment):
 
     def setPay(self, inPay):
         self.pay = inPay
+
+    def toString(self):
+        super().toString()
+        print("Name: " + self.getName() + " Pay: " + self.getPay())

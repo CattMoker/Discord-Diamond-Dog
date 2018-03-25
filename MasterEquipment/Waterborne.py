@@ -17,6 +17,10 @@ class Waterborne(Equipment):
     def setSpeed(self, inSpeed):
         self.speed = inSpeed
 
+    def toString(self):
+        super().toString()
+        print("Speed: " + self.getSpeed())
+
 
 
 

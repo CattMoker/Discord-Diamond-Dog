@@ -41,3 +41,7 @@ class Weapons(Equipment):
 
     def setProperties(self, inProperties):
         self.properties = inProperties
+
+    def toStrings(self):
+        super().toString()
+        print("Name: " + self.getName() + " Weapon Type: " + self.getWeaponType() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties())

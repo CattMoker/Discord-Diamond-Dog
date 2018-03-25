@@ -38,3 +38,7 @@ class Armor(Equipment):
 
     def setStealth(self, inStealth):
         self.stealth = inStealth
+
+    def toString(self):
+        super().toString()
+        print("Name: " + self.getName() + " Armor Class: " + self.getArmorClass() + " Strength: " + self.getStrength() + " Stealth: " + self.getStealth())

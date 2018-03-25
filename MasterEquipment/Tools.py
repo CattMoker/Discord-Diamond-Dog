@@ -14,3 +14,7 @@ class Tools(Equipment):
 
     def setName(self, inName):
         self.name = inName
+
+    def toString(self):
+        super().toString()
+        print("Name: " + self.getName())

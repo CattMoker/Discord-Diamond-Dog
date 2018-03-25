@@ -14,3 +14,7 @@ class Wealth(Equipment):
 
     def setFunds(self, inFunds):
         self.funds = inFunds
+
+    def toString(self):
+        super().toString()
+        print("Funds: " + self.getFunds())

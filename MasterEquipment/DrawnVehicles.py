@@ -14,3 +14,7 @@ class DrawnVehicles(Equipment):
 
     def setName(self, inSubName):
         self.name = inSubName
+
+    def toString(self):
+        super().toString()
+        print("Name: " + self.getName())

@@ -22,3 +22,8 @@ class Trinkets(Equipment):
 
     def setTrinkDesc(self, inTrinkDesc):
         self.trinkDesc = inTrinkDesc
+
+    def toString(self):
+        super().toString()
+        print("Trinket Num:" + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc())
+

@@ -14,3 +14,7 @@ class LifeExpenses(Equipment):
 
     def setPrice(self, inPrice):
         self.price = inPrice
+
+    def toString(self):
+        super().toString()
+        print("Price: " + self.getPrice())
