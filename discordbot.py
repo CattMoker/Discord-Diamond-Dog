@@ -4,6 +4,7 @@ import discord
 import json
 from discord.ext import commands
 from discord.ext.commands import Bot
+from discord.voice_client import VoiceClient
 import asyncio
 import os
 #import chalk
@@ -13,11 +14,14 @@ import os
 import random
 
 # what the bot is listening for
+startup_extensions = ["Music"]
 bot = commands.Bot(command_prefix="!")
+
+loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 # where out lists are declared
 sList = []
-with open('supportList.txt') as supportFile:
+with open(os.path.join(loc,'supportList.txt')) as supportFile:
     for line in supportFile:
         sList.append(line)
 
@@ -115,7 +119,6 @@ async def charCreate(ctx):
     # Writes response to JSON file
     data = {'Characters':[{'name': name.clean_content, 'age': age.clean_content, 'race': race.clean_content, 'class': charClass.clean_content, 'alignment': alignment.clean_content, 'height': height.clean_content, 'weight': weight.clean_content, 'hairColor': hairColor.clean_content, 'eyeColor': eyeColor.clean_content, 'skinColor': skinColor.clean_content, 'background': background.clean_content, 'traits': traits.clean_content, 'ideals': ideals.clean_content, 'flaws': flaws.clean_content, 'bonds': bonds.clean_content, 'proficiencies': proficiencies.clean_content}]}
     global loc
-    loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(loc, 'dbTest.json'), 'a') as outfile:
       json.dump(data, outfile)
     
@@ -123,6 +126,20 @@ async def charCreate(ctx):
 
 #########################################################################################################################################
 
+
+
+######################################################### AUDIO MEDIC ###################################################################
+
+# For loading cogs (essentially allowing the main file to access other files)
+if __name__ == "__main__":
+    for extension in startup_extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            exc = '{}: {}'.format(type(e).__name__, e)
+            print("Failed to load extension {}\n{}".format(extension, exc))
+
+#########################################################################################################################################
 
 @bot.command(pass_context=True)
 async def support(ctx):
@@ -195,7 +212,7 @@ async def roll(dice : str):
     await bot.say(result)
 
 # This is where the authentication token is inserted
-text_file = open("authToken.txt", "r")
+text_file = open(os.path.join(loc,"authToken.txt"), "r")
 #lines = text_file.readlines()
 token = text_file.readline()
 text_file.close()
