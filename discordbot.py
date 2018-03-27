@@ -234,11 +234,30 @@ async def waterborne(ctx):
     from MasterEquipment.Implements import ImplementWaterborne
     newborne = ImplementWaterborne.ImplementWaterborne()
     newborne.readList()
-    # embed = discord.Embed(description="Here's what I could find: ", color=0xff00ff)
-    # embed.add_field(name="Type of transport", value=Waterborne.Equipment.toString, inline=True)
-    # toString = await bot.say(embed=embed)
+    potato = []
+    newborne.runList(potato)
+    #wColumn = "Here's what I could find:\n Name \t Cost \t Weight \t Speed"
+    wColumn = "Here's what I could find:"
+    embed = discord.Embed(description=wColumn, color=0xff00ff)
+    wName = ""
+    wCost = ""
+    wWeight = ""
+    wSpeed = ""
+    for x in potato:
+        wName += x.getCategory() + "\n"
+        wCost += x.getCost() + "\n"
+        wWeight += x.getWeight() + "\n"
+        wSpeed += x.getSpeed() + "\n"
 
-    # data = {'Waterborne': [{'toString': toString.clean_content}]}
+    #embed.add_field(name="Name", value=wName, inline=False)
+    embed.add_field(name="Name", value=wName, inline=True)
+    embed.add_field(name="Cost", value=wCost, inline=True)
+    embed.add_field(name="Weight", value=wWeight, inline=False)
+    #embed.add_field(name="Speed", value=wSpeed, inline=False)
+    #embed.add_field(name="Type of transport", value="potato", inline=True)
+    toString = await bot.say(embed=embed)
+
+    data = {'Waterborne': [{'toString': toString.clean_content}]}
 
 
 # This is where the authentication token is inserted
