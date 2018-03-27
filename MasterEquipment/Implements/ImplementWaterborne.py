@@ -1,14 +1,30 @@
 from MasterEquipment import Waterborne
 
-waterborneList = []
 
-#_init_Waterborne(self, inCategory, inCost, inWeight, inSpeed)
-waterborneList.append(Waterborne.Waterborne("Galley","30,000 gp","","4 mph"))
-waterborneList.append(Waterborne.Waterborne("Keelboat","3,000 gp","","1 mph"))
-waterborneList.append(Waterborne.Waterborne("Longship","10,000 gp","","3 mph"))
-waterborneList.append(Waterborne.Waterborne("Rowboat","50 gp","","1.5 mph"))
-waterborneList.append(Waterborne.Waterborne("Sailing Ship","10,000 gp","","2 mph"))
-waterborneList.append(Waterborne.Waterborne("Warship","25,000 gp","","2.5 mph"))
+class ImplementWaterborne:
+    waterborneList = []
 
-for x in waterborneList:
-    print(x.toString())
+    def __init__(self):
+        self.waterborneList = []
+        self.waterborneList.append(Waterborne.Waterborne("Galley", "30,000 gp", "", "4 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Keelboat", "3,000 gp", "", "1 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Longship", "10,000 gp", "", "3 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Rowboat", "50 gp", "", "1.5 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Sailing Ship", "10,000 gp", "", "2 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Warship", "25,000 gp", "", "2.5 mph"))
+
+    def getList(self):
+        return self.waterborneList
+
+    def runList(self):
+        # _init_Waterborne(self, inCategory, inCost, inWeight, inSpeed)
+        self.waterborneList.append(Waterborne.Waterborne("Galley", "30,000 gp", "", "4 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Keelboat", "3,000 gp", "", "1 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Longship", "10,000 gp", "", "3 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Rowboat", "50 gp", "", "1.5 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Sailing Ship", "10,000 gp", "", "2 mph"))
+        self.waterborneList.append(Waterborne.Waterborne("Warship", "25,000 gp", "", "2.5 mph"))
+
+    def readList(self):
+        for x in self.waterborneList:
+            print(x.toString())
