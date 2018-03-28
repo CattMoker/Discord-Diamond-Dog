@@ -263,7 +263,7 @@ async def waterborne(ctx):
 # This is where the authentication token is inserted
 text_file = open(os.path.join(loc, "authToken.txt"), "r")
 # lines = text_file.readlines()
-token = text_file.readline()
+token = text_file.readline().strip()
 text_file.close()
 
 bot.run(token)
