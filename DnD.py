@@ -45,25 +45,23 @@ class DnD:
         # wColumn = "Here's what I could find:\n Name \t Cost \t Weight \t Speed"
         wColumn = "Here's what I could find:"
         embed = discord.Embed(description=wColumn, color=0xff00ff)
-        wName = ""
-        wCost = ""
-        wWeight = ""
-        wSpeed = ""
+        wFormat = ""
+        await self.bot.say("```Name(cost)(weight)(speed)```")
         for x in potato:
-            wName += x.getCategory() + "\n"
-            wCost += x.getCost() + "\n"
-            wWeight += x.getWeight() + "\n"
-            wSpeed += x.getSpeed() + "\n"
+            await self.bot.say("```" + x.getCategory() + "(" + x.getCost() + ")(" + x.getWeight() + ")(" + x.getSpeed() + ")" + "```")
 
-        # embed.add_field(name="Name", value=wName, inline=False)
-        embed.add_field(name="Name", value=wName, inline=True)
-        embed.add_field(name="Cost", value=wCost, inline=True)
-        embed.add_field(name="Weight", value=wWeight, inline=False)
-        # embed.add_field(name="Speed", value=wSpeed, inline=False)
-        # embed.add_field(name="Type of transport", value="potato", inline=True)
-        toString = await self.bot.say(embed=embed)
+    @commands.command(pass_context=True)
+    async def weapons(self, ctx):
+        from MasterEquipment.Implements import ImplementWeapons
 
-        data = {'Waterborne': [{'toString': toString.clean_content}]}
+        potato = ImplementWeapons.weaponList
+        # wColumn = "Here's what I could find:\n Name \t Cost \t Weight \t Speed"
+        wColumn = "Here's what I could find:"
+        embed = discord.Embed(description=wColumn, color=0xff00ff)
+        wFormat = ""
+        await self.bot.say("```category(name)(cost)(weight)(damage)(properties)```")
+        for x in potato:
+            await self.bot.say("```" + x.getCategory() + "(" + x.getName() + ")(" + x.getCost() + ")(" + x.getWeight() + ")(" + x.getDamage() + ")(" + x.getProperties() + "```")
 
     @commands.command(pass_context=True)
     async def charCreate(self, ctx):
