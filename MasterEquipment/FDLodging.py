@@ -19,4 +19,4 @@ class FDLodging(Equipment):
         print("Name: " + self.getName())
 
     def botMessage(self):
-        return super().botMessage() + "Name: " + self.getName()
+        return "Category: " + self.getCategory() + " Name: " + self.getName() + " Cost: " + self.getCost()

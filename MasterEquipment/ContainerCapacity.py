@@ -5,20 +5,13 @@ class ContainerCapacity(Equipment):
     name = ""
     capacity = None
 
-    def __init__(self, inCategory, inName, inCost, inWeight, inCapacity):
+    def __init__(self, inCategory, inCost, inWeight, inCapacity):
         super().__init__(inCategory, inCost, inWeight)
-        self.name = inName
 
         self.capacity = inCapacity
 
-    def getName(self):
-        return self.name
-
     def getCapacity(self):
         return self.capacity
-
-    def setName(self, inName):
-        self.name = inName
 
     def setCapacity(self, inCapacity):
         self.capacity = inCapacity
@@ -28,4 +21,4 @@ class ContainerCapacity(Equipment):
         print("Name: " + self.getName() + " Capacity: " + self.getCapacity())
 
     def botMessage(self):
-        return super().botMessage() + "Name: " + self.getName() + " Capacity: " + self.getCapacity()
+        return "Name: " + self.getCategory() + " Capacity: " + self.getCapacity()

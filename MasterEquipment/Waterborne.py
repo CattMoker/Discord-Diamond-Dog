@@ -19,4 +19,4 @@ class Waterborne(Equipment):
         print("Speed: " + self.getSpeed())
 
     def botMessage(self):
-        return super().botMessage() + "Speed: " + self.getSpeed()
+        return "Name: " + self.getCategory() + " Cost: " + self.getCost() + " Speed: " + self.getSpeed()

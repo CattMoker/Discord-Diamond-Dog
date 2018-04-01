@@ -44,4 +44,4 @@ class Armor(Equipment):
         print("Name: " + self.getName() + " Armor Class: " + self.getArmorClass() + " Strength: " + self.getStrength() + " Stealth: " + self.getStealth())
 
     def botMessage(self):
-        return super().botMessage() + "Name: " + self.getName() + " Armor Class: " + self.getArmorClass() + " Strength: " + self.getStrength() + " Stealth: " + self.getStealth()
+        return "Category: " + self.getCategory() + " Name: " + self.getName() + " Cost: " + self.getCost() + " Armor Class: " + self.getArmorClass() + " Strength: " + self.getStrength() + " Stealth: " + self.getStealth() + " Weight: " + self.getWeight()

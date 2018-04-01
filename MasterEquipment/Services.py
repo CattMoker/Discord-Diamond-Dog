@@ -28,4 +28,4 @@ class Services(Equipment):
         print("Name: " + self.getName() + " Pay: " + self.getPay())
 
     def botMessage(self):
-        return super().botMessage() + "Name: " + self.getName() + " Pay: " + self.getPay()
+        return "Category: " + self.getCategory() + " Name: " + self.getName() + " Pay: " + self.getPay()

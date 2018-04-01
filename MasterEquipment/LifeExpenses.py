@@ -20,4 +20,4 @@ class LifeExpenses(Equipment):
         print("Price: " + self.getPrice())
 
     def botMessage(self):
-        return super().botMessage() + "Price: " + self.getPrice()
+        return "Name: " + self.getCategory() + " Price/Day: " + self.getPrice()

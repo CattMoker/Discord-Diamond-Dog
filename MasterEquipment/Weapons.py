@@ -37,4 +37,4 @@ class Weapons(Equipment):
         print("Name: " + self.getName() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties())
 
     def botMessage(self):
-        return super().botMessage() + "Name: " + self.getName() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties()
+        return "Category: " + self.getCategory() + " Name: " + self.getName() + " Cost: " + self.getCost() + " Damage: " + self.getDamage() + " Weight: " + self.getWeight() + " Properties: " + self.getProperties()

@@ -20,4 +20,4 @@ class TradeGoods(Equipment):
         print("Goods: " + self.getGoods())
 
     def botMessage(self):
-        return super().botMessage() + "Goods: " + self.getGoods()
+        return "Cost: " + self.getCost() + " Goods: " + self.getGoods()

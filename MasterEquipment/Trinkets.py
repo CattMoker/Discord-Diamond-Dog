@@ -28,5 +28,5 @@ class Trinkets(Equipment):
         print("Trinket Num:" + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc())
 
     def botMessage(self):
-        return super().botMessage() + "Trinket Num:" + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc()
+        return "Trinket Num: " + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc()
 
