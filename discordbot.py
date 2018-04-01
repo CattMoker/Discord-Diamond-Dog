@@ -14,7 +14,7 @@ import os
 import random
 
 # what the bot is listening for
-startup_extensions = ["Music", "DnD"]
+startup_extensions = ["Music", "DnD", "Tables"]
 bot = commands.Bot(command_prefix="!")
 
 loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
