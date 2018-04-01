@@ -35,3 +35,6 @@ class Weapons(Equipment):
     def toString(self):
         super().toString()
         print("Name: " + self.getName() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties())
+
+    def botMessage(self):
+        return super().botMessage() + "Name: " + self.getName() + " Damage: " + self.getDamage() + " Properties: " + self.getProperties()

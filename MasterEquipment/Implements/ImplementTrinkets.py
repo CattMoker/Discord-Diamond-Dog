@@ -159,5 +159,5 @@ trinketsList.append(Trinkets.Trinkets("Gothic Trinkets","","","99-00","A vial of
 
 
 
-for x in trinketsList:
-    print(x.toString())
+#for x in trinketsList:
+ #   print(x.toString())

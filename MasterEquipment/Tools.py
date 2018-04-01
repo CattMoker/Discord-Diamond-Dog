@@ -18,3 +18,6 @@ class Tools(Equipment):
     def toString(self):
         super().toString()
         print("Name: " + self.getName())
+
+    def botMessage(self):
+        return super().botMessage() + "Name: " + self.getName()

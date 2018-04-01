@@ -18,5 +18,5 @@ mountsList.append(Mounts.Mounts("Pony", "30 gp", "", "40 ft", ""))
 mountsList.append(Mounts.Mounts("Warhorse", "400 gp", "", "60 ft", ""))
 
 
-for x in mountsList:
-    print(x.toString())
+#for x in mountsList:
+   # print(x.toString())

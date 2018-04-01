@@ -27,3 +27,6 @@ class Trinkets(Equipment):
         super().toString()
         print("Trinket Num:" + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc())
 
+    def botMessage(self):
+        return super().botMessage() + "Trinket Num:" + self.getTrinkNum() + " Trinket Description: " + self.getTrinkDesc()
+

@@ -26,3 +26,6 @@ class Mounts(Equipment):
     def toString(self):
         super().toString()
         print("Speed: " + self.getSpeed() + " Carrying Capacity: " + self.getCarryingCapacity())
+
+    def botMessage(self):
+        return super().botMessage() + "Speed: " + self.getSpeed() + " Carrying Capacity: " + self.getCarryingCapacity()

@@ -18,3 +18,6 @@ class Wealth(Equipment):
     def toString(self):
         super().toString()
         print("Funds: " + self.getFunds())
+
+    def botMessage(self):
+        return super().botMessage() + "Funds: " + self.getFunds()

@@ -26,3 +26,6 @@ class ContainerCapacity(Equipment):
     def toString(self):
         super().toString()
         print("Name: " + self.getName() + " Capacity: " + self.getCapacity())
+
+    def botMessage(self):
+        return super().botMessage() + "Name: " + self.getName() + " Capacity: " + self.getCapacity()

@@ -21,6 +21,6 @@ armorList.append(Armor.Armor("Heavy Armor", "Plate", "1500 gp", "65 lb", "18", "
 #Shield
 armorList.append(Armor.Armor("Shield", "Shield", "10 gp", "6 lb", "+2", "", ""))
 
-for x in armorList:
-    print(x.toString())
+#for x in armorList:
+ #   print(x.toString())
 

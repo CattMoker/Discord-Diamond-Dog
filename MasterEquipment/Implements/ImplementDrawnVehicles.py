@@ -24,5 +24,5 @@ drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Stabling (Per Day)", "
 drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Wagons", "35 gp", "400lbs"))
 
 
-for x in drawnVehiclesList:
-    print (x.toString())
+#for x in drawnVehiclesList:
+ #   print (x.toString())

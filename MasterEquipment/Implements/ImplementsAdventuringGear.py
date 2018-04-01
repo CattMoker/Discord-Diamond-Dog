@@ -114,6 +114,6 @@ adventuringGear.append(AdventuringGear.AdventuringGear("", "Waterskin", "2 sp", 
 adventuringGear.append(AdventuringGear.AdventuringGear("", "Whetstone", "1 cp", "1 lb."))
 
 
-for x in adventuringGear:
-    x.toString()
+#for x in adventuringGear:
+ #   x.toString()
 # print(adventuringGear[0].getName())

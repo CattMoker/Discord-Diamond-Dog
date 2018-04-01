@@ -19,6 +19,7 @@ class DnD:
     """Voice related commands.
     Works in multiple servers at once.
     """
+    loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
     def __init__(self, bot):
         self.bot = bot
@@ -38,30 +39,33 @@ class DnD:
     @commands.command(pass_context=True)
     async def waterborne(self, ctx):
         from MasterEquipment.Implements import ImplementWaterborne
-        newborne = ImplementWaterborne.ImplementWaterborne()
-        newborne.readList()
-        potato = []
-        newborne.runList(potato)
-        # wColumn = "Here's what I could find:\n Name \t Cost \t Weight \t Speed"
-        wColumn = "Here's what I could find:"
-        embed = discord.Embed(description=wColumn, color=0xff00ff)
-        wFormat = ""
-        await self.bot.say("```Name(cost)(weight)(speed)```")
-        for x in potato:
-            await self.bot.say("```" + x.getCategory() + "(" + x.getCost() + ")(" + x.getWeight() + ")(" + x.getSpeed() + ")" + "```")
+        potato = ImplementWaterborne.waterborneList
+        await self.printList(potato)
+
 
     @commands.command(pass_context=True)
     async def weapons(self, ctx):
         from MasterEquipment.Implements import ImplementWeapons
-
         potato = ImplementWeapons.weaponList
-        # wColumn = "Here's what I could find:\n Name \t Cost \t Weight \t Speed"
+        await self.printList(potato)
+
+    async def printList(self, potato):
         wColumn = "Here's what I could find:"
-        embed = discord.Embed(description=wColumn, color=0xff00ff)
-        wFormat = ""
-        await self.bot.say("```category(name)(cost)(weight)(damage)(properties)```")
-        for x in potato:
-            await self.bot.say("```" + x.getCategory() + "(" + x.getName() + ")(" + x.getCost() + ")(" + x.getWeight() + ")(" + x.getDamage() + ")(" + x.getProperties() + "```")
+        await self.bot.say(wColumn)
+        rangeBot = 0
+        rangeTop = 4
+        endList = False
+        while not endList:
+            wFormat = ""
+            for x in range(rangeBot, rangeTop):
+                if x < potato.__len__():
+                    wFormat += "```" + potato[x].botMessage() + "```"
+                else:
+                    endList = True
+            await self.bot.say(wFormat)
+            rangeBot += 4
+            rangeTop += 4
+        await self.bot.say("End of Table Reached")
 
     @commands.command(pass_context=True)
     async def charCreate(self, ctx):

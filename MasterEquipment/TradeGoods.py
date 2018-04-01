@@ -18,3 +18,6 @@ class TradeGoods(Equipment):
     def toString(self):
         super().toString()
         print("Goods: " + self.getGoods())
+
+    def botMessage(self):
+        return super().botMessage() + "Goods: " + self.getGoods()

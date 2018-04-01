@@ -38,3 +38,6 @@ class Equipment:
 
     def toString(self):
         print("Category: " + self.getCategory() + " Cost: " + self.getCost() + " Weight: " + self.getWeight() + " ")
+
+    def botMessage(self):
+        return "Category: " + self.getCategory() + " Cost: " + self.getCost() + " Weight: " + self.getWeight() + " "

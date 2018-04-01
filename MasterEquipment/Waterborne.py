@@ -17,3 +17,6 @@ class Waterborne(Equipment):
     def toString(self):
         super().toString()
         print("Speed: " + self.getSpeed())
+
+    def botMessage(self):
+        return super().botMessage() + "Speed: " + self.getSpeed()

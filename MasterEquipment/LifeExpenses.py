@@ -18,3 +18,6 @@ class LifeExpenses(Equipment):
     def toString(self):
         super().toString()
         print("Price: " + self.getPrice())
+
+    def botMessage(self):
+        return super().botMessage() + "Price: " + self.getPrice()
