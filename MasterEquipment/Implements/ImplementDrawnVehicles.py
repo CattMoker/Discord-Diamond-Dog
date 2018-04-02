@@ -22,7 +22,19 @@ drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Saddlebags", "4 gp", "
 drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Sled", "20 gp", "300 lbs"))
 drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Stabling (Per Day)", "5 sp", ""))
 drawnVehiclesList.append(DrawnVehicles.DrawnVehicles("", "Wagons", "35 gp", "400lbs"))
+import sqlite3
+db = sqlite3.connect('../../Equipment.db')
+# Creates or opens a file called mydb with a SQLite3 DB
 
-
+# Get a cursor object
+cursor = db.cursor()
+#for x in drawnVehiclesList:
+#    cursor.execute("INSERT INTO DrawnVehicles (category, name, cost, weight) VALUES (?,?,?,?)",
+#                   (x.getCategory(), x.getName(), x.getCost(), x.getWeight()))
+#cursor.execute("DELETE FROM DrawnVehicles")
+cursor.execute("SELECT * FROM DrawnVehicles")
+print(cursor.fetchall())
+db.commit()
+db.close()
 #for x in drawnVehiclesList:
  #   print (x.toString())

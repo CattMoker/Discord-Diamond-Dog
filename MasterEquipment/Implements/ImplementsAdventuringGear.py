@@ -113,7 +113,20 @@ adventuringGear.append(AdventuringGear.AdventuringGear("", "Vial", "1 gp", ""))
 adventuringGear.append(AdventuringGear.AdventuringGear("", "Waterskin", "2 sp", "5 lb. (full)"))
 adventuringGear.append(AdventuringGear.AdventuringGear("", "Whetstone", "1 cp", "1 lb."))
 
+import sqlite3
+db = sqlite3.connect('../../Equipment.db')
+# Creates or opens a file called mydb with a SQLite3 DB
 
+# Get a cursor object
+cursor = db.cursor()
+#for x in adventuringGear:
+#    cursor.execute("INSERT INTO AdventuringGear (category, name, cost, weight) VALUES (?,?,?,?)",
+#                   (x.getCategory(), x.getName(), x.getCost(), x.getWeight()))
+#cursor.execute("DELETE FROM AdventuringGear")
+cursor.execute("SELECT * FROM AdventuringGear")
+print(cursor.fetchall())
+db.commit()
+db.close()
 #for x in adventuringGear:
  #   x.toString()
 # print(adventuringGear[0].getName())
