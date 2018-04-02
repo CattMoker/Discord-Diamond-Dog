@@ -28,12 +28,6 @@ with open(os.path.join(loc, 'supportList.txt')) as supportFile:
 mList = []
 mList.append("")
 
-with open("img.png", "rb") as imageFile:
-  f = imageFile.read()
-  b = bytearray(f)
-
-print(b[0])
-
 
 @bot.event
 async def on_ready():

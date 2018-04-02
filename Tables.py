@@ -6,7 +6,7 @@ from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import asyncio
 import os
-
+import sqlite3
 
 # import chalk
 
@@ -22,8 +22,14 @@ class Tables:
 
     @commands.command(pass_context=True)
     async def armors(self, ctx):
-        from MasterEquipment.Implements import ImplementArmor
-        potato = ImplementArmor.armorList
+        #from MasterEquipment.Implements import ImplementArmor
+        #potato = ImplementArmor.armorList
+        #await self.printList(potato)
+        potato = []
+        conn = sqlite3.connect('Equipment.db')
+        cur = conn.cursor()
+        for row in cur.execute('SELECT * FROM Armor'):
+            potato.append(str(row))
         await self.printList(potato)
 
     @commands.command(pass_context=True)
@@ -93,6 +99,24 @@ class Tables:
         await self.printList(potato)
 
     async def printList(self, potato):
+        wColumn = "Here's what I could find:"
+        await self.bot.say(wColumn)
+        rangeBot = 0
+        rangeTop = 4
+        endList = False
+        while not endList:
+            wFormat = ""
+            for x in range(rangeBot, rangeTop):
+                if x < potato.__len__():
+                    wFormat += "```" + potato[x] + "```"
+                else:
+                    endList = True
+            await self.bot.say(wFormat)
+            rangeBot += 4
+            rangeTop += 4
+        await self.bot.say("End of Table Reached")
+
+    async def printList2(self, potato):
         wColumn = "Here's what I could find:"
         await self.bot.say(wColumn)
         rangeBot = 0

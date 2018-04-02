@@ -5,6 +5,32 @@ db = sqlite3.connect('../Equipment.db')
 
 # Get a cursor object
 cursor = db.cursor()
+
+#######################IMPORTANT####################
+cursor.execute('''
+CREATE TABLE Character(
+discord VARCHAR(30) PRIMARY KEY,
+name VARCHAR(30), 
+race VARCHAR(30), 
+charClass VARCHAR(30), 
+alignment VARCHAR(30), 
+age VARCHAR(30), 
+height VARCHAR(30), 
+weight VARCHAR(30), 
+hairColor VARCHAR(30), 
+eyeColor VARCHAR(30), 
+skinColor VARCHAR(30), 
+background VARCHAR(30), 
+traits VARCHAR(30), 
+ideals VARCHAR(30), 
+flaws VARCHAR(30), 
+bonds VARCHAR(30), 
+proficiencies VARCHAR(30)
+)
+''')
+
+
+####################################################
 #done
 cursor.execute('''
 CREATE TABLE Armor(
