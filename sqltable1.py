@@ -7,7 +7,7 @@ db = sqlite3.connect('Equipment.db')
 cursor = db.cursor()
 
 cursor.execute('''
-    CREATE TABLE Armor(
+CREATE TABLE Armor(
 id INTEGER PRIMARY KEY,
 category VARCHAR(30),
 name VARCHAR(30),
@@ -45,6 +45,49 @@ cost VARCHAR(30),
 weight VARCHAR(30)
 )
 ''')
+
+#########################################################################FDLodging, Mounts, Services and Tools###############################################################
+cursor.execute('''
+CREATE TABLE FDLodging(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+name VARCHAR(30),
+cost VARCHAR(30)
+)
+''')
+
+
+cursor.execute('''
+CREATE TABLE Mounts(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+cost VARCHAR(30),
+speed VARCHAR(30),
+carryingcapacity VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE Services(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+name VARCHAR(30),
+pay VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE Tools(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+name VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30)
+)
+''')
+
+
+
 db.commit()
 db.close()
 
