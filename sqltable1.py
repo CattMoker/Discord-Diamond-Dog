@@ -86,6 +86,58 @@ weight VARCHAR(30)
 )
 ''')
 
+cursor.execute('''
+CREATE TABLE LifeExpenses(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30),
+price VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE TradeGoods(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30),
+goods VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE Trinkets(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30),
+trinknum VARCHAR(30),
+trinkdesc VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE Waterborne(
+id INTEGER PRIMARY KEY,
+category VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30),
+speed VARCHAR(30)
+)
+''')
+
+cursor.execute('''
+CREATE TABLE Weapons(
+id INTEGER PRIMARY KEY,
+name VARCHAR(30),
+subname VARCHAR(30),
+cost VARCHAR(30),
+weight VARCHAR(30),
+damage VARCHAR(30),
+properties VARCHAR(30)
+)
+''')
 
 
 db.commit()
