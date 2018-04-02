@@ -6,7 +6,7 @@ from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import asyncio
 import os
-
+import sqlite3
 
 # import chalk
 
