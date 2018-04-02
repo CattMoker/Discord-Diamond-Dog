@@ -50,9 +50,3 @@ toolsList.append(Tools.Tools("Musical Instruments", "Viol", "30 gp", "1 lb"))
 toolsList.append(Tools.Tools("", "Navigator's Tools", "25 gp", "2 lbs"))
 toolsList.append(Tools.Tools("", "Poisoner's Kit", "50 gp", "2 lbs"))
 toolsList.append(Tools.Tools("", "Thieves' Tools", "25 gp", "1 lb"))
-
-
-#for x in toolsList:
- #   print(x.toString())
-
-

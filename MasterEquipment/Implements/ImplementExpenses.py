@@ -10,7 +10,3 @@ expenseList.append(LifeExpenses.LifeExpenses("Modest", "", "", "1 gp per day"))
 expenseList.append(LifeExpenses.LifeExpenses("Comfortable", "", "", "2 gp per day"))
 expenseList.append(LifeExpenses.LifeExpenses("Wealthy", "", "", "4 gp per day"))
 expenseList.append(LifeExpenses.LifeExpenses("Aristocratic", "", "", "10 gp per day minimum"))
-
-
-#for x in expenseList:
- #   print(x.toString())

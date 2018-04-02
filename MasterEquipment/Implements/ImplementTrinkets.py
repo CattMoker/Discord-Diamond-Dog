@@ -156,8 +156,3 @@ trinketsList.append(Trinkets.Trinkets("Gothic Trinkets","","","93-94","A tiny sp
 trinketsList.append(Trinkets.Trinkets("Gothic Trinkets","","","95-96","A tiny clockwork figurine of a dancer that’s missing a gear and doesn’t work"))
 trinketsList.append(Trinkets.Trinkets("Gothic Trinkets","","","97-98","A black wooden pipe that creates puffs of smoke that look like skulls"))
 trinketsList.append(Trinkets.Trinkets("Gothic Trinkets","","","99-00","A vial of perfume, the scent of which only certain creatures can detect"))
-
-
-
-#for x in trinketsList:
- #   print(x.toString())

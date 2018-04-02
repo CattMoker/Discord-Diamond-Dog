@@ -33,7 +33,3 @@ lodgingList.append(FDLodging.FDLodging("", "Chunk of Meat", "3 sp", ""))
 #Wine
 lodgingList.append(FDLodging.FDLodging("Wine", "Common (Pitcher)", "2 sp", ""))
 lodgingList.append(FDLodging.FDLodging("Wine", "Fine (Bottle)", "10 gp", ""))
-
-
-#for x in lodgingList:
-   # print(x.toString())

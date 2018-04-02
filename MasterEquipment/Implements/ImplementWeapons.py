@@ -48,9 +48,6 @@ weaponList.append(Weapons.Weapons("Martial Ranged Weapons", "Crossbow, heavy", "
 weaponList.append(Weapons.Weapons("Martial Ranged Weapons", "Longbow", "50 gp", "2 lb.", "1d8 piercing", "Ammunition (range 150/600), heavy, two-handed"))
 weaponList.append(Weapons.Weapons("Martial Ranged Weapons", "Net", "1 gp", "3 lb.", "", "Special, thrown (range 5/15)"))
 
-#for x in weaponList:
- #   x.toString()
-
 
 
 

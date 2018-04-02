@@ -48,7 +48,8 @@ class Character:
         bonds = ""
         proficiencies = ""
 
-    def Character(self, inName, inRace, inCharClass, inAlignment, inAge, inHeight, inWeight, inHairColor, inEyeColor, inSkinColor, inBackground, inTraits, inIdeals, inFlaws, inBonds, inProficiencies):
+    def Character(self, inName, inRace, inCharClass, inAlignment, inAge, inHeight, inWeight, inHairColor, inEyeColor,
+                  inSkinColor, inBackground, inTraits, inIdeals, inFlaws, inBonds, inProficiencies):
         # basic characteristics
         self.name = inName
         self.race = inRace
@@ -125,73 +126,97 @@ class Character:
 
     def getName(self):
         return self.name
+
     def getRace(self):
         return self.race
+
     def getCharClass(self):
         return self.charClass
+
     def getAlignment(self):
         return self.alignment
 
     def getAge(self):
         return self.age
+
     def getHeight(self):
         return self.height
+
     def getWeight(self):
         return self.weight
 
     def getHairColor(self):
         return self.hairColor
+
     def getEyeColor(self):
         return self.eyeColor
+
     def getSkinColor(self):
         return self.skinColor
 
     def getBackground(self):
         return self.background
+
     def getTraits(self):
         return self.traits
+
     def getIdeals(self):
         return self.ideals
+
     def getFlaws(self):
         return self.flaws
+
     def getBonds(self):
         return self.bonds
+
     def getProficiencies(self):
         return self.proficiencies
 
     def setName(self, inName):
         self.name = inName
+
     def setRace(self, inRace):
         self.race = inRace
+
     def setCharClass(self, inCharClass):
         self.charClass = inCharClass
+
     def setAlignment(self, inAlignment):
         self.alignment = inAlignment
 
     def setAge(self, inAge):
         self.age = inAge
+
     def setHeight(self, inHeight):
         self.height = inHeight
+
     def setWeight(self, inWeight):
         self.weight = inWeight
 
     def setHairColor(self, inHairColor):
         self.charClass = inHairColor
+
     def setEyeColor(self, inEyeColor):
         self.eyeColor = inEyeColor
+
     def setSkinColor(self, inSkinColor):
         self.skinColor = inSkinColor
 
     def setBackground(self, inBackground):
         self.background = inBackground
+
     def setTraits(self, inTraits):
         self.traits = inTraits
+
     def setIdeals(self, inIdeals):
         self.ideals = inIdeals
+
     def setFlaws(self, inFlaws):
         self.flaws = inFlaws
+
     def setBonds(self, inBonds):
         self.bonds = inBonds
+
     def setProficiencies(self, inProficiencies):
         self.proficiencies = inProficiencies
 

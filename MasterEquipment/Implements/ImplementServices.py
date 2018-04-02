@@ -16,6 +16,3 @@ servicesList.append(Services.Services("", "Messenger", "2 cp per Mile", "", ""))
 servicesList.append(Services.Services("", "Road Toll", "1 cp", "", ""))
 servicesList.append(Services.Services("", "Gate Toll", "1 cp", "", ""))
 servicesList.append(Services.Services("", "Ship's Passage", "1 sp per Mile", "", ""))
-
-#for x in servicesList:
-  #  print(x.toString())

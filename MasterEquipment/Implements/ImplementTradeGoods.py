@@ -26,7 +26,3 @@ tradeGoodList.append(TradeGoods.TradeGoods("Saffron", "15 gp", "1 lb", ""))
 tradeGoodList.append(TradeGoods.TradeGoods("Ox", "15 gp", "", "Full"))
 tradeGoodList.append(TradeGoods.TradeGoods("Gold", "50 gp", "1 lb", ""))
 tradeGoodList.append(TradeGoods.TradeGoods("Platinum", "500 gp", "1 lb", ""))
-
-
-#for x in tradeGoodList:
- #   print(x.toString())

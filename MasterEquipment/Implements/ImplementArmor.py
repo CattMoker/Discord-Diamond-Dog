@@ -1,5 +1,3 @@
-import sqlite3
-#from MasterEquipment.Equipment import Equipment
 from MasterEquipment import Armor
 
 armorList = []
@@ -21,21 +19,3 @@ armorList.append(Armor.Armor("Heavy Armor", "Splint", "200 gp", "60 lb", "17", "
 armorList.append(Armor.Armor("Heavy Armor", "Plate", "1500 gp", "65 lb", "18", "Str 15", "Disadvantage"))
 #Shield
 armorList.append(Armor.Armor("Shield", "Shield", "10 gp", "6 lb", "+2", "", ""))
-
-# Create a database in RAM
-db = sqlite3.connect('../../Equipment.db')
-# Creates or opens a file called mydb with a SQLite3 DB
-
-# Get a cursor object
-cursor = db.cursor()
-#for x in armorList:
-#    cursor.execute("INSERT INTO Armor (category, name, cost, armorclass, strength, stealth, weight) VALUES (?,?,?,?,?,?,?)",
-#                   (x.getCategory(), x.getName(), x.getCost(), x.getArmorClass(), x.getStrength(), x.getStealth(), x.getWeight()))
-#cursor.execute("DELETE FROM Armor")
-cursor.execute("SELECT * FROM Armor")
-print(cursor.fetchall())
-db.commit()
-db.close()
-#for x in armorList:
- #   print(x.toString())
-
