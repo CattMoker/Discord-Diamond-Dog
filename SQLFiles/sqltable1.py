@@ -9,7 +9,7 @@ cursor = db.cursor()
 #######################IMPORTANT####################
 cursor.execute('''
 CREATE TABLE Character(
-discord VARCHAR(30) PRIMARY KEY,
+id INTEGER PRIMARY KEY AUTOINCREMENT ,
 name VARCHAR(30), 
 race VARCHAR(30), 
 charClass VARCHAR(30), 
@@ -25,7 +25,9 @@ traits VARCHAR(30),
 ideals VARCHAR(30), 
 flaws VARCHAR(30), 
 bonds VARCHAR(30), 
-proficiencies VARCHAR(30)
+proficiencies VARCHAR(30),
+disc VARCHAR(30),
+serv VARCHAR(30)
 )
 ''')
 

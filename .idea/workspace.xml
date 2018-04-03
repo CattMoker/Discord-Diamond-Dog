@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f9a7fc-2d82-4cac-b5d7-b6aa164c1253" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Character.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Equipment.db" afterPath="$PROJECT_DIR$/Equipment.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Discord-Diamond-Dog.iml" afterPath="$PROJECT_DIR$/.idea/Discord-Diamond-Dog.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DnD.py" afterPath="$PROJECT_DIR$/DnD.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQLFiles/sqltable1.py" afterPath="$PROJECT_DIR$/SQLFiles/sqltable1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/discordbot.py" afterPath="$PROJECT_DIR$/discordbot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,15 +18,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Discord_Diamond_Dog$discordbot.coverage" NAME="discordbot Coverage Results" MODIFIED="1520719316872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Discord_Diamond_Dog$discordbot.coverage" NAME="discordbot Coverage Results" MODIFIED="1522767291170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Discord_Diamond_Dog$Character.coverage" NAME="Character Coverage Results" MODIFIED="1520719325793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Discord_Diamond_Dog$ImplementSQL.coverage" NAME="ImplementSQL Coverage Results" MODIFIED="1522765996941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SQLFiles" />
+    <SUITE FILE_PATH="coverage/Discord_Diamond_Dog$sqltable1.coverage" NAME="sqltable1 Coverage Results" MODIFIED="1522765987885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SQLFiles" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="discordbot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/discordbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1125">
+            <state relative-caret-position="-1921">
               <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding>
                 <element signature="e#59#73#0" expanded="true" />
@@ -30,12 +37,88 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Character.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5025">
+            <state relative-caret-position="79">
               <caret line="201" column="30" lean-forward="false" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DnD.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DnD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="130" column="20" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1522767227208" expanded="true" signature="4759:4982" ph="INSERT INTO Character... " />
+                <marker date="1522767227208" expanded="true" signature="5899:5929" ph="SELECT * FRO... missing_value" />
+                <marker date="1522767227208" expanded="true" signature="6072:6086" ph="SELECT * FRO... missing_value" />
+                <marker date="1522767227208" expanded="true" signature="6072:6090" ph="SELECT * FRO... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqltable1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLFiles/sqltable1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <marker date="1522765978055" expanded="true" signature="255:705" ph="CREATE TABLE... Character" />
+                <marker date="1522765978055" expanded="true" signature="791:980" ph="CREATE TABLE... Armor" />
+                <marker date="1522765978055" expanded="true" signature="1011:1143" ph="CREATE TABLE... AdventuringGear" />
+                <marker date="1522765978055" expanded="true" signature="1169:1269" ph="CREATE TABLE... ContainerCapacity" />
+                <marker date="1522765978055" expanded="true" signature="1300:1430" ph="CREATE TABLE... DrawnVehicles" />
+                <marker date="1522765978055" expanded="true" signature="1636:1742" ph="CREATE TABLE... FDLodging" />
+                <marker date="1522765978055" expanded="true" signature="1774:1908" ph="CREATE TABLE... Mounts" />
+                <marker date="1522765978055" expanded="true" signature="1939:2043" ph="CREATE TABLE... Services" />
+                <marker date="1522765978055" expanded="true" signature="2074:2196" ph="CREATE TABLE... Tools" />
+                <marker date="1522765978055" expanded="true" signature="2227:2315" ph="CREATE TABLE... Expenses" />
+                <marker date="1522765978055" expanded="true" signature="2346:2432" ph="CREATE TABLE... TradeGoods" />
+                <marker date="1522765978055" expanded="true" signature="2463:2555" ph="CREATE TABLE... Trinkets" />
+                <marker date="1522765978055" expanded="true" signature="2586:2694" ph="CREATE TABLE... Waterborne" />
+                <marker date="1522765978055" expanded="true" signature="2726:2894" ph="CREATE TABLE... Weapons" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplementSQL.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLFiles/ImplementSQL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <folding>
+                <marker date="1522764323458" expanded="true" signature="497:599" ph="INSERT INTO Armor... " />
+                <marker date="1522764323458" expanded="true" signature="786:805" ph="SELECT * FRO... Armor" />
+                <marker date="1522764323458" expanded="true" signature="1012:1085" ph="INSERT INTO DrawnVehicles... " />
+                <marker date="1522764323458" expanded="true" signature="1228:1255" ph="SELECT * FRO... DrawnVehicles" />
+                <marker date="1522764323458" expanded="true" signature="1461:1512" ph="INSERT INTO Expenses... " />
+                <marker date="1522764323458" expanded="true" signature="1632:1654" ph="SELECT * FRO... Expenses" />
+                <marker date="1522764323458" expanded="true" signature="1855:1914" ph="INSERT INTO FDLodging... " />
+                <marker date="1522764323458" expanded="true" signature="2046:2069" ph="SELECT * FRO... FDLodging" />
+                <marker date="1522764323458" expanded="true" signature="2266:2343" ph="INSERT INTO Mounts... " />
+                <marker date="1522764323458" expanded="true" signature="2501:2521" ph="SELECT * FRO... Mounts" />
+                <marker date="1522764323458" expanded="true" signature="2731:2806" ph="INSERT INTO AdventuringGear... " />
+                <marker date="1522764323458" expanded="true" signature="2953:2982" ph="SELECT * FRO... AdventuringGear" />
+                <marker date="1522764323458" expanded="true" signature="3190:3247" ph="INSERT INTO Services... " />
+                <marker date="1522764323458" expanded="true" signature="3378:3400" ph="SELECT * FRO... Services" />
+                <marker date="1522764323458" expanded="true" signature="3594:3659" ph="INSERT INTO Tools... " />
+                <marker date="1522764323458" expanded="true" signature="3806:3825" ph="SELECT * FRO... Tools" />
+                <marker date="1522764323458" expanded="true" signature="4025:4074" ph="INSERT INTO TradeGoods... " />
+                <marker date="1522764323458" expanded="true" signature="4190:4214" ph="SELECT * FRO... TradeGoods" />
+                <marker date="1522764323458" expanded="true" signature="4417:4472" ph="INSERT INTO Trinkets... " />
+                <marker date="1522764323458" expanded="true" signature="4596:4618" ph="SELECT * FRO... Trinkets" />
+                <marker date="1522764323458" expanded="true" signature="4822:4883" ph="INSERT INTO Waterborne... " />
+                <marker date="1522764323458" expanded="true" signature="5016:5040" ph="SELECT * FRO... Waterborne" />
+                <marker date="1522764323458" expanded="true" signature="5237:5328" ph="INSERT INTO Weapons... " />
+                <marker date="1522764323458" expanded="true" signature="5509:5530" ph="SELECT * FRO... Weapons" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,6 +165,8 @@
       <list>
         <option value="$PROJECT_DIR$/discordbot.py" />
         <option value="$PROJECT_DIR$/Character.py" />
+        <option value="$PROJECT_DIR$/SQLFiles/sqltable1.py" />
+        <option value="$PROJECT_DIR$/DnD.py" />
       </list>
     </option>
   </component>
@@ -92,10 +177,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
-    <option name="y" value="12" />
-    <option name="width" value="1383" />
-    <option name="height" value="1090" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -112,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -121,16 +205,23 @@
               <item name="Discord-Diamond-Dog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Discord-Diamond-Dog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Discord-Diamond-Dog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Discord-Diamond-Dog" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -144,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Character">
+  <component name="RunManager" selected="Python.discordbot">
     <configuration name="Character" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,7 +253,24 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="ImplementSQL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLFiles" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Discord-Diamond-Dog" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLFiles/ImplementSQL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <configuration name="discordbot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,16 +289,37 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="2">
+    <configuration name="sqltable1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLFiles" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Discord-Diamond-Dog" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLFiles/sqltable1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.discordbot" />
       <item index="1" class="java.lang.String" itemvalue="Python.Character" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sqltable1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ImplementSQL" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.Character" />
-        <item index="1" class="java.lang.String" itemvalue="Python.discordbot" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.discordbot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ImplementSQL" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sqltable1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Character" />
       </list>
     </recent_temporary>
   </component>
@@ -211,28 +340,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3251073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32488823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -247,6 +376,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/discordbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#59#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -263,9 +402,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="201" column="30" lean-forward="false" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authToken.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="201" column="30" lean-forward="false" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLFiles/sqltable1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1522765978055" expanded="true" signature="255:705" ph="CREATE TABLE... Character" />
+            <marker date="1522765978055" expanded="true" signature="791:980" ph="CREATE TABLE... Armor" />
+            <marker date="1522765978055" expanded="true" signature="1011:1143" ph="CREATE TABLE... AdventuringGear" />
+            <marker date="1522765978055" expanded="true" signature="1169:1269" ph="CREATE TABLE... ContainerCapacity" />
+            <marker date="1522765978055" expanded="true" signature="1300:1430" ph="CREATE TABLE... DrawnVehicles" />
+            <marker date="1522765978055" expanded="true" signature="1636:1742" ph="CREATE TABLE... FDLodging" />
+            <marker date="1522765978055" expanded="true" signature="1774:1908" ph="CREATE TABLE... Mounts" />
+            <marker date="1522765978055" expanded="true" signature="1939:2043" ph="CREATE TABLE... Services" />
+            <marker date="1522765978055" expanded="true" signature="2074:2196" ph="CREATE TABLE... Tools" />
+            <marker date="1522765978055" expanded="true" signature="2227:2315" ph="CREATE TABLE... Expenses" />
+            <marker date="1522765978055" expanded="true" signature="2346:2432" ph="CREATE TABLE... TradeGoods" />
+            <marker date="1522765978055" expanded="true" signature="2463:2555" ph="CREATE TABLE... Trinkets" />
+            <marker date="1522765978055" expanded="true" signature="2586:2694" ph="CREATE TABLE... Waterborne" />
+            <marker date="1522765978055" expanded="true" signature="2726:2894" ph="CREATE TABLE... Weapons" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLFiles/ImplementSQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <marker date="1522764323458" expanded="true" signature="497:599" ph="INSERT INTO Armor... " />
+            <marker date="1522764323458" expanded="true" signature="786:805" ph="SELECT * FRO... Armor" />
+            <marker date="1522764323458" expanded="true" signature="1012:1085" ph="INSERT INTO DrawnVehicles... " />
+            <marker date="1522764323458" expanded="true" signature="1228:1255" ph="SELECT * FRO... DrawnVehicles" />
+            <marker date="1522764323458" expanded="true" signature="1461:1512" ph="INSERT INTO Expenses... " />
+            <marker date="1522764323458" expanded="true" signature="1632:1654" ph="SELECT * FRO... Expenses" />
+            <marker date="1522764323458" expanded="true" signature="1855:1914" ph="INSERT INTO FDLodging... " />
+            <marker date="1522764323458" expanded="true" signature="2046:2069" ph="SELECT * FRO... FDLodging" />
+            <marker date="1522764323458" expanded="true" signature="2266:2343" ph="INSERT INTO Mounts... " />
+            <marker date="1522764323458" expanded="true" signature="2501:2521" ph="SELECT * FRO... Mounts" />
+            <marker date="1522764323458" expanded="true" signature="2731:2806" ph="INSERT INTO AdventuringGear... " />
+            <marker date="1522764323458" expanded="true" signature="2953:2982" ph="SELECT * FRO... AdventuringGear" />
+            <marker date="1522764323458" expanded="true" signature="3190:3247" ph="INSERT INTO Services... " />
+            <marker date="1522764323458" expanded="true" signature="3378:3400" ph="SELECT * FRO... Services" />
+            <marker date="1522764323458" expanded="true" signature="3594:3659" ph="INSERT INTO Tools... " />
+            <marker date="1522764323458" expanded="true" signature="3806:3825" ph="SELECT * FRO... Tools" />
+            <marker date="1522764323458" expanded="true" signature="4025:4074" ph="INSERT INTO TradeGoods... " />
+            <marker date="1522764323458" expanded="true" signature="4190:4214" ph="SELECT * FRO... TradeGoods" />
+            <marker date="1522764323458" expanded="true" signature="4417:4472" ph="INSERT INTO Trinkets... " />
+            <marker date="1522764323458" expanded="true" signature="4596:4618" ph="SELECT * FRO... Trinkets" />
+            <marker date="1522764323458" expanded="true" signature="4822:4883" ph="INSERT INTO Waterborne... " />
+            <marker date="1522764323458" expanded="true" signature="5016:5040" ph="SELECT * FRO... Waterborne" />
+            <marker date="1522764323458" expanded="true" signature="5237:5328" ph="INSERT INTO Weapons... " />
+            <marker date="1522764323458" expanded="true" signature="5509:5530" ph="SELECT * FRO... Weapons" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/discordbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1125">
+        <state relative-caret-position="-1921">
           <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#59#73#0" expanded="true" />
@@ -273,11 +500,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Character.py">
+    <entry file="file://$PROJECT_DIR$/DnD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5025">
-          <caret line="201" column="30" lean-forward="false" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="130" column="20" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1522767227208" expanded="true" signature="4759:4982" ph="INSERT INTO Character... " />
+            <marker date="1522767227208" expanded="true" signature="5899:5929" ph="SELECT * FRO... missing_value" />
+            <marker date="1522767227208" expanded="true" signature="6072:6086" ph="SELECT * FRO... missing_value" />
+            <marker date="1522767227208" expanded="true" signature="6072:6090" ph="SELECT * FRO... " />
+          </folding>
         </state>
       </provider>
     </entry>

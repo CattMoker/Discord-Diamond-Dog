@@ -118,12 +118,20 @@ class DnD:
         col = "disc"
         discId = ctx.message.author.id
 
-        cursor.execute('SELECT * FROM {tn} WHERE {cn}={cv}'. \
+        for role in ctx.message.author.roles:
+            if role.name != "Dungeon Master":
+                cursor.execute('SELECT * FROM {tn} WHERE {cn}={cv}'. \
                   format(tn=table, cn=col, cv=discId))
-        all_rows = cursor.fetchall()
-        str1 = '\n'.join(''.join(str(x)) for x in all_rows)
+
+            if role.name == "Dungeon Master":
+                cursor.execute('SELECT * FROM {tn}'. \
+                    format(tn=table))
+
+            all_rows = cursor.fetchall()
+            str1 = '\n'.join(''.join(str(x)) for x in all_rows)
+
         if (all_rows != []):
-            await self.bot.say("```" + str1 + "\n" + "```")
+            await self.bot.send_message(ctx.message.author, "```" + str1 + "\n" + "```")
         if (all_rows == []):
             await self.bot.say ("Sorry, you don't have any characters. Create a new one with !charCreate.")
 

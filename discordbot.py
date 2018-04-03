@@ -143,7 +143,7 @@ async def embed(ctx):
     embed = discord.Embed(title="test", description="my name Coker", color=0x00ff00)
     embed.set_footer(text="this is a footer")
     embed.set_author(name="Coker of Alcoholicorn Productions")
-    embed.set_field(name="This is a field", value="no it isn't", inline=True)
+    embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
 
