@@ -42,6 +42,12 @@ class DnD:
     async def charCreate(self, ctx):
         # Waits for user response and spits out a confirmation message (for testing)
         # await bot.say("Enter your character's name: ")
+        db = sqlite3.connect('../Discord-Diamond-Dog/Equipment.db')
+        cursor = db.cursor()
+
+        discId = ctx.message.author.id
+        servId = ctx.message.server.id
+
         await self.bot.send_message(ctx.message.author, "Enter your character's name: ")
         name = await self.bot.wait_for_message(author=ctx.message.author, content=None)
 
@@ -94,20 +100,33 @@ class DnD:
 
         await self.bot.send_message(ctx.message.author, "All done, your character has been created.")
 
-        # Writes response to JSON file
-        data = {'Characters': [{'name': name.clean_content, 'age': age.clean_content, 'race': race.clean_content,
-                                'class': charClass.clean_content, 'alignment': alignment.clean_content,
-                                'height': height.clean_content, 'weight': weight.clean_content,
-                                'hairColor': hairColor.clean_content, 'eyeColor': eyeColor.clean_content,
-                                'skinColor': skinColor.clean_content, 'background': background.clean_content,
-                                'traits': traits.clean_content, 'ideals': ideals.clean_content,
-                                'flaws': flaws.clean_content, 'bonds': bonds.clean_content,
-                                'proficiencies': proficiencies.clean_content}]}
-        global loc
-        with open(os.path.join(loc, 'dbTest.json'), 'a') as outfile:
-            json.dump(data, outfile)
+        cursor.execute('''INSERT INTO Character (name, race, charClass, alignment, age, height, weight, hairColor, eyeColor, skinColor, background, traits, ideals, flaws, bonds, proficiencies, disc, serv) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
+                   (name.clean_content, race.clean_content, charClass.clean_content, alignment.clean_content,
+                    age.clean_content, height.clean_content, weight.clean_content, hairColor.clean_content,
+                    eyeColor.clean_content, skinColor.clean_content, background.clean_content, traits.clean_content,
+                    ideals.clean_content, flaws.clean_content, bonds.clean_content, proficiencies.clean_content,
+                    discId, servId))
 
-        # input(message.channel, message.content)
+        db.commit()
+        db.close()
+
+    @commands.command(pass_context=True)
+    async def charList(self, ctx):
+        db = sqlite3.connect('../Discord-Diamond-Dog/Equipment.db')
+        cursor = db.cursor()
+        table = "Character"
+        col = "disc"
+        discId = ctx.message.author.id
+
+        cursor.execute('SELECT * FROM {tn} WHERE {cn}={cv}'. \
+                  format(tn=table, cn=col, cv=discId))
+        all_rows = cursor.fetchall()
+        str1 = '\n'.join(''.join(str(x)) for x in all_rows)
+        if (all_rows != []):
+            await self.bot.say("```" + str1 + "\n" + "```")
+        if (all_rows == []):
+            await self.bot.say ("Sorry, you don't have any characters. Create a new one with !charCreate.")
+
 
 
 def setup(bot):
