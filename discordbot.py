@@ -1,14 +1,13 @@
 # StartBot by the Alcoholicorn
 # essential package imports
+from datetime import datetime
+
 import discord
-import json
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import asyncio
-import os
-# import chalk
-
+import threading, time, os, json
 
 # packages that I decided to import
 import random
@@ -147,9 +146,34 @@ async def embed(ctx):
     await bot.say(embed=embed)
 
 
+@bot.command(pass_context=True)
+async def dateCall():
+    potato = True
+    with open("birthdays.txt") as f:
+        content = f.readlines()
+    birthdayList = []
+    for x in content:
+        birthdayList.append(x.split())
 
+    while potato:
 
+        for x in birthdayList:
 
+            personDate = datetime(datetime.now().year, int(x[1]), int(x[2]))
+            todayDate = datetime(datetime.now().year, datetime.now().month, datetime.now().day)
+            print("personMonth: " + str(personDate.month) + " personDay: " + str(personDate.day))
+            print("todayMonth: " + str(todayDate.month) + " todayDay: " + str(todayDate.day))
+            if personDate.month == todayDate.month and personDate.day == todayDate.day:
+                try:
+                    {
+                        await bot.say("Happy Birthday <@" + x[3] + ">")
+                    }
+                except Exception as e:
+                    {
+                        e.with_traceback()
+                    }
+
+        await asyncio.sleep(43200)
 
 
 # This is where the authentication token is inserted
