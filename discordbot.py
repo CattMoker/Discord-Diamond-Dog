@@ -33,7 +33,7 @@ async def on_ready():
     print("Ret to go")
     print("I am running on" + bot.user.name)
     print("With the ID: " + bot.user.id)
-
+    discord.Client.send_message(discord.Client, "Stage One Complete")
 
 @bot.command(pass_context=True)
 async def ping(ctx):

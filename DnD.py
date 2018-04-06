@@ -1,12 +1,8 @@
 import discord
-import json
-import random
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
-import asyncio
-import os
-import sqlite3
+import asyncio, os, sqlite3, random
 
 # import chalk
 
