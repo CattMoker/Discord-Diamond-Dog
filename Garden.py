@@ -23,7 +23,7 @@ class Garden:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def groundsSB(self, ctx):
+    async def groundsSB(self, ctx, weight):
         # Create a database in RAM
         db = sqlite3.connect('../Garden.db')
         # Creates or opens a file called mydb with a SQLite3 DB
@@ -33,13 +33,35 @@ class Garden:
 
         #######################IMPORTANT####################
         cursor.execute(
-            "INSERT INTO Garden (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("Starbucks", ctx.message.server.id, "19.21" + "lbs", datetime.now(), ctx.message.author.id))
+            "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
+            ("Starbucks", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
+
+        db.commit()
+        db.close()
+
+    @commands.command(pass_context=True)
+    async def collectSB(self, ctx):
+        # Create a database in RAM
+        db = sqlite3.connect('../Garden.db')
+        # Creates or opens a file called mydb with a SQLite3 DB
+
+        # Get a cursor object
+        cursor = db.cursor()
+
+        #######################IMPORTANT####################
+        potato = []
+        conn = sqlite3.connect('Garden.db')
+        cur = conn.cursor()
+        for row in cur.execute('SELECT * FROM ' + "Coffee_Grounds"):
+            potato.append(str(row))
+        for x in potato:
+            print(x)
 
         db.commit()
         db.close()
 
 
+
 def setup(bot):
     bot.add_cog(Garden(bot))
-    print('Tables Cog has been loaded.')
+    print('Garden Cog has been loaded.')

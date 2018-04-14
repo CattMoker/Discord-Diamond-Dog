@@ -27,6 +27,11 @@ with open(os.path.join(loc, 'supportList.txt')) as supportFile:
 mList = []
 mList.append("")
 
+#import binascii
+#filename = 'test.jpg'
+#ith open(filename, 'rb') as f:
+#    content = f.read()
+#print(binascii.hexlify(content))
 
 @bot.event
 async def on_ready():
