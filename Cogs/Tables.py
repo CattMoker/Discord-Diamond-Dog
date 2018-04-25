@@ -70,7 +70,7 @@ class Tables:
 
     async def queryList(self, tableQuery):
         potato = []
-        conn = sqlite3.connect('../Databases/Equipment.db')
+        conn = sqlite3.connect('Databases/Equipment.db')
         cur = conn.cursor()
         for row in cur.execute('SELECT * FROM ' + tableQuery):
             potato.append(str(row))

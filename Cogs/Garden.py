@@ -25,7 +25,7 @@ class Garden:
     @commands.command(pass_context=True)
     async def groundsSB(self, ctx, weight):
         # Create a database in RAM
-        db = sqlite3.connect('../Databases/Garden.db')
+        db = sqlite3.connect('Databases/Garden.db')
         # Creates or opens a file called mydb with a SQLite3 DB
 
         # Get a cursor object
@@ -44,7 +44,7 @@ class Garden:
     @commands.command(pass_context=True)
     async def groundsPOD(self, ctx, weight):
         # Create a database in RAM
-        db = sqlite3.connect('../Databases/Garden.db')
+        db = sqlite3.connect('Databases/Garden.db')
         # Creates or opens a file called mydb with a SQLite3 DB
 
         # Get a cursor object
@@ -82,7 +82,7 @@ class Garden:
     @commands.command(pass_context=True)
     async def collectSB(self, ctx):
         # Create a database in RAM
-        db = sqlite3.connect('../Databases/Garden.db')
+        db = sqlite3.connect('Databases/Garden.db')
         # Creates or opens a file called mydb with a SQLite3 DB
 
         # Get a cursor object
@@ -90,7 +90,7 @@ class Garden:
 
         #######################IMPORTANT####################
         potato = []
-        conn = sqlite3.connect('../Databases/Garden.db')
+        conn = sqlite3.connect('Databases/Garden.db')
         cur = conn.cursor()
         for row in cur.execute('SELECT * FROM ' + "Coffee_Grounds"):
             potato.append(str(row))
@@ -99,6 +99,36 @@ class Garden:
 
         db.commit()
         db.close()
+
+    @commands.command(pass_context=True)
+    async def SBGroundsPrint(self, ctx):
+        await self.printList(await self.queryList("Weapons"))
+
+    async def queryList(self, tableQuery):
+        potato = []
+        conn = sqlite3.connect('Databases/Garden.db')
+        cur = conn.cursor()
+        for row in cur.execute('SELECT * FROM ' + tableQuery):
+            potato.append(str(row))
+        return potato
+
+    async def printList(self, potato):
+        wColumn = "Here's what I could find:"
+        await self.bot.say(wColumn)
+        rangeBot = 0
+        rangeTop = 4
+        endList = False
+        while not endList:
+            wFormat = ""
+            for x in range(rangeBot, rangeTop):
+                if x < potato.__len__():
+                    wFormat += "```" + potato[x] + "```"
+                else:
+                    endList = True
+            await self.bot.say(wFormat)
+            rangeBot += 4
+            rangeTop += 4
+        await self.bot.say("End of Table Reached")
 
 
 

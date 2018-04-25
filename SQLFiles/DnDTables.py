@@ -1,6 +1,6 @@
 import sqlite3
 # Create a database in RAM
-db = sqlite3.connect('../Databases/Equipment.db')
+db = sqlite3.connect('../Databases/Char.db')
 # Creates or opens a file called mydb with a SQLite3 DB
 
 # Get a cursor object
@@ -31,6 +31,15 @@ serv VARCHAR(30)
 )
 ''')
 
+
+db.commit()
+db.close()
+
+db = sqlite3.connect('../Databases/Equipment.db')
+# Creates or opens a file called mydb with a SQLite3 DB
+
+# Get a cursor object
+cursor = db.cursor()
 
 ####################################################
 #done

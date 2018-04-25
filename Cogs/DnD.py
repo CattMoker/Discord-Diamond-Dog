@@ -38,7 +38,7 @@ class DnD:
     async def charCreate(self, ctx):
         # Waits for user response and spits out a confirmation message (for testing)
         # await bot.say("Enter your character's name: ")
-        db = sqlite3.connect('../Databases/Equipment.db')
+        db = sqlite3.connect('Databases/Char.db')
         cursor = db.cursor()
 
         discId = ctx.message.author.id
@@ -108,7 +108,7 @@ class DnD:
 
     @commands.command(pass_context=True)
     async def charList(self, ctx):
-        db = sqlite3.connect('../Databases/Equipment.db')
+        db = sqlite3.connect('Databases/Character.db')
         cursor = db.cursor()
         table = "Character"
         col = "disc"
