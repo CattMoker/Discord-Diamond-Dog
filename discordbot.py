@@ -13,7 +13,7 @@ import threading, time, os, json
 import random
 
 # what the bot is listening for
-startup_extensions = ["Music", "DnD", "Tables"]
+startup_extensions = ["Cogs.Music", "Cogs.DnD", "Cogs.Tables", "Cogs.Garden"]
 bot = commands.Bot(command_prefix="!")
 
 loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))

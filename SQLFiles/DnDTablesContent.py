@@ -1,7 +1,7 @@
 import sqlite3
 
 # Create a database in RAM
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 # Creates or opens a file called mydb with a SQLite3 DB
 
 from MasterEquipment.Implements import ImplementExpenses, ImplementDrawnVehicles, ImplementArmor, ImplementFDLodging, ImplementMounts, ImplementsAdventuringGear, ImplementServices, ImplementTools, ImplementTradeGoods, ImplementTrinkets, ImplementWaterborne, ImplementWeapons
@@ -20,7 +20,7 @@ db.close()
 
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementDrawnVehicles.drawnVehiclesList:
    cursor.execute("INSERT INTO DrawnVehicles (category, name, cost, weight) VALUES (?,?,?,?)",
@@ -34,7 +34,7 @@ db.close()
 
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementExpenses.expenseList:
     cursor.execute("INSERT INTO Expenses (category, price) VALUES (?,?)",
@@ -48,7 +48,7 @@ db.close()
 
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementFDLodging.lodgingList:
     cursor.execute("INSERT INTO FDLodging (category, name, cost) VALUES (?,?,?)",
@@ -61,7 +61,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementMounts.mountsList:
     cursor.execute("INSERT INTO Mounts (category, cost, speed, carryingcapacity) VALUES (?,?,?,?)",
@@ -75,7 +75,7 @@ db.close()
 
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementsAdventuringGear.adventuringGear:
     cursor.execute("INSERT INTO AdventuringGear (category, name, cost, weight) VALUES (?,?,?,?)",
@@ -88,7 +88,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementServices.servicesList:
     cursor.execute("INSERT INTO Services (category, name, pay) VALUES (?,?,?)",
@@ -101,7 +101,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementTools.toolsList:
     cursor.execute("INSERT INTO Tools (category, name, cost, weight) VALUES (?,?,?,?)",
@@ -114,7 +114,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementTradeGoods.tradeGoodList:
     cursor.execute("INSERT INTO TradeGoods (cost, goods) VALUES (?,?)",
@@ -127,7 +127,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementTrinkets.trinketsList:
     cursor.execute("INSERT INTO Trinkets (trinkNum, trinkDesc) VALUES (?,?)",
@@ -140,7 +140,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementWaterborne.waterborneList:
     cursor.execute("INSERT INTO Waterborne (category, cost, speed) VALUES (?,?,?)",
@@ -153,7 +153,7 @@ db.commit()
 db.close()
 
 #done
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 cursor = db.cursor()
 for x in ImplementWeapons.weaponList:
     cursor.execute("INSERT INTO Weapons (category, name, cost, damage, weight, properties) VALUES (?,?,?,?,?,?)",

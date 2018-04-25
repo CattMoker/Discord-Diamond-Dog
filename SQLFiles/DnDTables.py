@@ -1,6 +1,6 @@
 import sqlite3
 # Create a database in RAM
-db = sqlite3.connect('../Equipment.db')
+db = sqlite3.connect('../Databases/Equipment.db')
 # Creates or opens a file called mydb with a SQLite3 DB
 
 # Get a cursor object
