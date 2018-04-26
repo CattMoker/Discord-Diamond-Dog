@@ -34,7 +34,7 @@ class Garden:
         #######################IMPORTANT####################
         cursor.execute(
             "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("Starbucks", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
+            ("SB", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
 
         db.commit()
         db.close()
@@ -53,7 +53,7 @@ class Garden:
         #######################IMPORTANT####################
         cursor.execute(
             "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("Pod Building A", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
+            ("Pod", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
 
         db.commit()
         db.close()
@@ -72,7 +72,7 @@ class Garden:
         #######################IMPORTANT####################
         cursor.execute(
             "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("Einstein's Brothers Bagels", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
+            ("EB", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
 
         db.commit()
         db.close()
