@@ -1,7 +1,12 @@
 import sqlite3
-# Create a database in RAM
+
+# class: DnDTables.py
+# purpose: This file creates all of the tables to be made, they still need to be populated
+# after use of file
+# note: You only need to run this once. Otherwise it'll just say that the tables have been made
+
 db = sqlite3.connect('../Databases/Char.db')
-# Creates or opens a file called mydb with a SQLite3 DB
+
 
 # Get a cursor object
 cursor = db.cursor()

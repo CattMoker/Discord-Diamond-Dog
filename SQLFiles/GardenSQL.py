@@ -1,8 +1,10 @@
 import sqlite3
 
-# Create a database in RAM
+# class: GardenSQL.py
+# purpose: This is the file that makes the garden tables for Garden.py
+# note: this file needs to be run once
 db = sqlite3.connect('../Databases/Garden.db')
-# Creates or opens a file called mydb with a SQLite3 DB
+
 
 # Get a cursor object
 cursor = db.cursor()

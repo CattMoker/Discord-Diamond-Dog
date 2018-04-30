@@ -1,7 +1,8 @@
 import sqlite3
 import itertools
 
-# Create a database in RAM
+# class: TestSQL
+# purpose: this class was just to test sqlite in python
 conn = sqlite3.connect('../Equipment.db')
 cur = conn.cursor()
 

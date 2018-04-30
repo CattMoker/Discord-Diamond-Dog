@@ -1,8 +1,12 @@
 import sqlite3
 
-# Create a database in RAM
+
+# class: DnDTablesContent
+# purpose: fills the tables that DnDTables.py created
+# warning: this file can be called more than once, don't use more than once
+#          you'll fill the tables with redundant information
+
 db = sqlite3.connect('../Databases/Equipment.db')
-# Creates or opens a file called mydb with a SQLite3 DB
 
 from MasterEquipment.Implements import ImplementExpenses, ImplementDrawnVehicles, ImplementArmor, ImplementFDLodging, ImplementMounts, ImplementsAdventuringGear, ImplementServices, ImplementTools, ImplementTradeGoods, ImplementTrinkets, ImplementWaterborne, ImplementWeapons
 
