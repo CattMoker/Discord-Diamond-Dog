@@ -34,22 +34,7 @@ class Garden:
     # return type:
     @commands.command(pass_context=True)
     async def groundsSB(self, ctx, weight):
-        # Create a database in RAM
-        db = sqlite3.connect('Databases/Garden.db')
-        # Creates or opens a file called mydb with a SQLite3 DB
-
-        # Get a cursor object
-        cursor = db.cursor()
-
-        #######################IMPORTANT####################
-        cursor.execute(
-            "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("SB", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
-
-        db.commit()
-        db.close()
-        await self.bot.say(
-            "Inserted Grounds for Starbucks Weight: " + weight + " Insert time is: " + str(datetime.now()))
+        self.runGroundsInsert(ctx, weight, "SB", "Starbucks'")
 
     # method: groundsPOD
     # param: weight
@@ -57,29 +42,21 @@ class Garden:
     # return type: void
     @commands.command(pass_context=True)
     async def groundsPOD(self, ctx, weight):
-        # Create a database in RAM
-        db = sqlite3.connect('Databases/Garden.db')
-        # Creates or opens a file called mydb with a SQLite3 DB
-
-        # Get a cursor object
-        cursor = db.cursor()
-
-        #######################IMPORTANT####################
-        cursor.execute(
-            "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("Pod", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
-
-        db.commit()
-        db.close()
-        await self.bot.say(
-            "Inserted Grounds for Pod Building A Weight: " + weight + " Insert time is: " + datetime.now())
+        self.runGroundsInsert(ctx, weight, "Pod", "Pod Building A")
 
     # method: groundsEB
     # param: weight
     # purpose: enters in coffee grounds into the Coffee_Grounds Table for Einsteins Bros Bagels
-    # return type:
+    # return type: void
     @commands.command(pass_context=True)
     async def groundsEB(self, ctx, weight):
+        self.runGroundsInsert(ctx, weight, "EB", "Einstein's Brothers Bagels")
+
+    # method: runGroundsInsert
+    # param: ctx, weight, vendor, statement
+    # purpose: streamlines the insert into the Coffee_Grounds Table
+    # return type: void
+    async def runGroundsInsert(self, ctx, weight, vendor, statement):
         # Create a database in RAM
         db = sqlite3.connect('../Databases/Garden.db')
         # Creates or opens a file called mydb with a SQLite3 DB
@@ -90,12 +67,13 @@ class Garden:
         #######################IMPORTANT####################
         cursor.execute(
             "INSERT INTO Coffee_Grounds (vendor, name, weight, drop_time, discord_id) VALUES (?,?,?,?,?)",
-            ("EB", ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
+            (vendor, ctx.message.server.id, weight, datetime.now(), ctx.message.author.id))
 
         db.commit()
         db.close()
         await self.bot.say(
-            "Inserted Grounds for Einstein's Brothers Bagels Weight: " + weight + " Insert time is: " + datetime.now())
+            "Inserted Grounds for " + statement + "Weight: " + weight + " Insert time is: " + datetime.now())
+
 
     # method: collectSB
     # param: none
