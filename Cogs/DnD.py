@@ -17,9 +17,17 @@ class DnD:
     """
     loc = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
+    # method: __init__
+    # param: bot
+    # purpose: initializes the bot for the class
+    # return type: void
     def __init__(self, bot):
         self.bot = bot
 
+    # method: roll
+    # param: dice: str
+    # purpose: allows the user to roll dice using a dice then how many sides that all die have
+    # return type: void
     @commands.command()
     async def roll(self, dice: str):
         """Rolls a dice in NdN format."""
@@ -32,8 +40,10 @@ class DnD:
         result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
         await self.bot.say(result)
 
-
-
+    # method: charCreate
+    # param: ctx
+    # purpose: uses direct message to get setup all of the character traits for a user and ties it to a server
+    # return type: void
     @commands.command(pass_context=True)
     async def charCreate(self, ctx):
         # Waits for user response and spits out a confirmation message (for testing)
@@ -106,6 +116,10 @@ class DnD:
         db.commit()
         db.close()
 
+    # method: charList
+    # param: none
+    # purpose: returns the list of all characters to a server
+    # return type: void
     @commands.command(pass_context=True)
     async def charList(self, ctx):
         db = sqlite3.connect('Databases/Character.db')
@@ -132,7 +146,10 @@ class DnD:
             await self.bot.say ("Sorry, you don't have any characters. Create a new one with !charCreate.")
 
 
-
+# method: setup
+# param: none
+# purpose: links the cog to the discordbot.py launcher
+# return type: void
 def setup(bot):
     bot.add_cog(DnD(bot))
     print('DnD Cog has been loaded.')
