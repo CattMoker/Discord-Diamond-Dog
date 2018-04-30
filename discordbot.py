@@ -33,20 +33,30 @@ mList.append("")
 #    content = f.read()
 #print(binascii.hexlify(content))
 
+# method: on_ready
+# param: none
+# purpose: meant to print out to the console with standard identification
+# return type: void
 @bot.event
 async def on_ready():
     print("Ret to go")
     print("I am running on" + bot.user.name)
     print("With the ID: " + bot.user.id)
-    discord.Client.send_message(discord.Client, "Stage One Complete")
 
+# method: ping
+# param: none
+# purpose: the user will call this command to ping the bot to make sure its working
+# return type: void
 @bot.command(pass_context=True)
 async def ping(ctx):
     """To check if the bot is alive"""
     await bot.say(":ping_pong: ***SCREEEEEEEEEEEEECH***")
     print("user has pinged")
 
-
+# method: speak
+# param: none
+# purpose: to make the bot bark
+# return type: void
 @bot.command(pass_context=True)
 async def speak(ctx):
     """To make bot speak"""
@@ -54,7 +64,10 @@ async def speak(ctx):
     # await bot.say('Bork', tts=True)
     print("bot has spoken")
 
-
+# method: pet
+# param: none
+# purpose: a response to the bot being called upon the pet command
+# return type: void
 @bot.command(pass_context=True)
 async def pet(ctx):
     await bot.say(
@@ -91,12 +104,19 @@ if __name__ == "__main__":
 
 #########################################################################################################################################
 
+# method: support
+# param: empty
+# purpose: calls upon a local txt file that holds all the supportive lines in times of stress
+# return type: void
 @bot.command(pass_context=True)
 async def support(ctx):
     '''Support Lines Yo'''
     await bot.say(sList[random.randint(0, len(sList) - 1)])
 
-
+# method: info
+# param: user: discord.Member
+# purpose: gathers info on any user in the user's server
+# return type: void
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
     """Retrieves info on a user"""
@@ -114,7 +134,10 @@ async def info(ctx, user: discord.Member):
     # await bot.say("The user joined at: {}".format(user.joined_at))
     await bot.say(embed=embed)
 
-
+# method: serverinfo
+# param: none
+# purpose: retrieves info on the user's server
+# return type: void
 @bot.command(pass_context=True)
 async def serverinfo(ctx):
     """Displays server info"""
@@ -128,20 +151,29 @@ async def serverinfo(ctx):
     embed.set_thumbnail(url=ctx.message.server.icon_url)
     await bot.say(embed=embed)
 
-
+# method: kick
+# param: user: discord.Member
+# purpose: to kick another member from the server,
+# return type: void
 @bot.command(pass_context=True)
 @commands.has_role("On the TAP")
 async def kick(ctx, user: discord.Member):
     await bot.say(":boot: {}. See ya heathen!".format(user.name))
     await bot.kick(user)
 
-
+# method: hello
+# param: none
+# purpose: the bot texts-to-speech hello
+# return type: void
 @bot.command(pass_context=True)
 # @commands.has_role("On the TAP")
 async def hello(ctx):
     await bot.say("/tts hello")
 
-
+# method: embed
+# param: none
+# purpose: to send an embed of the first author's info in a very not fashion
+# return type: void
 @bot.command(pass_context=True)
 async def embed(ctx):
     embed = discord.Embed(title="test", description="my name Coker", color=0x00ff00)
@@ -150,7 +182,10 @@ async def embed(ctx):
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
-
+# method: dateCall
+# param: none
+# purpose: this calls upon the birthdays.txt file, checks every 12 hours for the list
+# return type: void
 @bot.command(pass_context=True)
 async def dateCall():
     potato = True
