@@ -39,7 +39,7 @@ But first, **make sure you have a group server where you can put in your bot**!
 5. Delete where it says CLIENT_ID_HERE and paste your copied client ID and click enter. 
 6. There will now be an option to pick which server you want your bot to be in. Choose your preferred server and you're almost done!
 
-##Auth Token - IMPORTANT INSTRUCTIONS##
+## Auth Token - IMPORTANT INSTRUCTIONS
 1. Go back to https://discordapp.com/developers/docs/intro and go to your bot
 2. On this page, scroll down until you see Token under the bot section. Click it and it will reveal your SPECIFIC token! **DO NOT SHARE WITH ANYONE!!**
 3. In the folder you have Discord-Diamond-Dog cloned, make a new text file called 'authToken.txt' and copy that code & save. 
