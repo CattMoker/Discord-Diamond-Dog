@@ -1,10 +1,10 @@
-#The Diamond Dog Project
+# The Diamond Dog Project
 
 Thank you for your interest in our project. Please follow these rules so that you can use it!  
 
 But first, **make sure you have a group server where you can put in your bot**!
 
-##Installing Python
+## Installing Python
 
 1. One of the biggest things you need to use this project is Python. 
 2. That can be done by downloading the most current Python from this link: https://www.python.org/downloads/
@@ -16,7 +16,7 @@ But first, **make sure you have a group server where you can put in your bot**!
 **This will clone everything from our repo onto your computer. Just search Discord-Diamond-Dog on your computer**
 
 
-##Importing the Packages
+## Importing the Packages
 
 1. On the IDE of your choice, open the 'discordbot.py' file from our GitHub (We suggest using PyCharm because it's Python based).
 2. Once downloaded, type in the command line these following commands. They will import the necessary libraries for you:
@@ -30,7 +30,7 @@ But first, **make sure you have a group server where you can put in your bot**!
 
 3. Once all of that is installed, please continue to the next steps.
 
-##Making the Bot
+## Making the Bot
 
 1. Go to the following link: -	https://discordapp.com/developers/docs/intro
 2. Click on 'Make a New App' and pick 'My Apps' on the left side
